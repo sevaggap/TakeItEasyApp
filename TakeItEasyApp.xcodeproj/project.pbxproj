@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9498486A284FE57A007211DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984869284FE57A007211DC /* AppDelegate.swift */; };
+		9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486B284FE57A007211DC /* SceneDelegate.swift */; };
+		9498486E284FE57A007211DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486D284FE57A007211DC /* ViewController.swift */; };
+		94984871284FE57A007211DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9498486F284FE57A007211DC /* Main.storyboard */; };
+		94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */; };
+		94984876284FE57C007211DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94984875284FE57C007211DC /* Assets.xcassets */; };
+		94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94984877284FE57C007211DC /* LaunchScreen.storyboard */; };
+		94984884284FE57C007211DC /* TakeItEasyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984883284FE57C007211DC /* TakeItEasyAppTests.swift */; };
+		9498488E284FE57D007211DC /* TakeItEasyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498488D284FE57D007211DC /* TakeItEasyAppUITests.swift */; };
+		94984890284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94984880284FE57C007211DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9498485E284FE57A007211DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94984865284FE57A007211DC;
+			remoteInfo = TakeItEasyApp;
+		};
+		9498488A284FE57D007211DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9498485E284FE57A007211DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94984865284FE57A007211DC;
+			remoteInfo = TakeItEasyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94984866284FE57A007211DC /* TakeItEasyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94984869284FE57A007211DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9498486B284FE57A007211DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9498486D284FE57A007211DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94984870284FE57A007211DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94984873284FE57A007211DC /* TakeItEasyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TakeItEasyApp.xcdatamodel; sourceTree = "<group>"; };
+		94984875284FE57C007211DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94984878284FE57C007211DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9498487A284FE57C007211DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9498487F284FE57C007211DC /* TakeItEasyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeItEasyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94984883284FE57C007211DC /* TakeItEasyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeItEasyAppTests.swift; sourceTree = "<group>"; };
+		94984889284FE57D007211DC /* TakeItEasyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeItEasyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9498488D284FE57D007211DC /* TakeItEasyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeItEasyAppUITests.swift; sourceTree = "<group>"; };
+		9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeItEasyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94984863284FE57A007211DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9498487C284FE57C007211DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94984886284FE57D007211DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9498485D284FE57A007211DC = {
+			isa = PBXGroup;
+			children = (
+				94984868284FE57A007211DC /* TakeItEasyApp */,
+				94984882284FE57C007211DC /* TakeItEasyAppTests */,
+				9498488C284FE57D007211DC /* TakeItEasyAppUITests */,
+				94984867284FE57A007211DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94984867284FE57A007211DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94984866284FE57A007211DC /* TakeItEasyApp.app */,
+				9498487F284FE57C007211DC /* TakeItEasyAppTests.xctest */,
+				94984889284FE57D007211DC /* TakeItEasyAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94984868284FE57A007211DC /* TakeItEasyApp */ = {
+			isa = PBXGroup;
+			children = (
+				94984869284FE57A007211DC /* AppDelegate.swift */,
+				9498486B284FE57A007211DC /* SceneDelegate.swift */,
+				9498486D284FE57A007211DC /* ViewController.swift */,
+				9498486F284FE57A007211DC /* Main.storyboard */,
+				94984875284FE57C007211DC /* Assets.xcassets */,
+				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
+				9498487A284FE57C007211DC /* Info.plist */,
+				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
+			);
+			path = TakeItEasyApp;
+			sourceTree = "<group>";
+		};
+		94984882284FE57C007211DC /* TakeItEasyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				94984883284FE57C007211DC /* TakeItEasyAppTests.swift */,
+			);
+			path = TakeItEasyAppTests;
+			sourceTree = "<group>";
+		};
+		9498488C284FE57D007211DC /* TakeItEasyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9498488D284FE57D007211DC /* TakeItEasyAppUITests.swift */,
+				9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */,
+			);
+			path = TakeItEasyAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94984865284FE57A007211DC /* TakeItEasyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94984893284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyApp" */;
+			buildPhases = (
+				94984862284FE57A007211DC /* Sources */,
+				94984863284FE57A007211DC /* Frameworks */,
+				94984864284FE57A007211DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TakeItEasyApp;
+			productName = TakeItEasyApp;
+			productReference = 94984866284FE57A007211DC /* TakeItEasyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9498487E284FE57C007211DC /* TakeItEasyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94984896284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyAppTests" */;
+			buildPhases = (
+				9498487B284FE57C007211DC /* Sources */,
+				9498487C284FE57C007211DC /* Frameworks */,
+				9498487D284FE57C007211DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94984881284FE57C007211DC /* PBXTargetDependency */,
+			);
+			name = TakeItEasyAppTests;
+			productName = TakeItEasyAppTests;
+			productReference = 9498487F284FE57C007211DC /* TakeItEasyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94984888284FE57D007211DC /* TakeItEasyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94984899284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyAppUITests" */;
+			buildPhases = (
+				94984885284FE57D007211DC /* Sources */,
+				94984886284FE57D007211DC /* Frameworks */,
+				94984887284FE57D007211DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9498488B284FE57D007211DC /* PBXTargetDependency */,
+			);
+			name = TakeItEasyAppUITests;
+			productName = TakeItEasyAppUITests;
+			productReference = 94984889284FE57D007211DC /* TakeItEasyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9498485E284FE57A007211DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					94984865284FE57A007211DC = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					9498487E284FE57C007211DC = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 94984865284FE57A007211DC;
+					};
+					94984888284FE57D007211DC = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 94984865284FE57A007211DC;
+					};
+				};
+			};
+			buildConfigurationList = 94984861284FE57A007211DC /* Build configuration list for PBXProject "TakeItEasyApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9498485D284FE57A007211DC;
+			productRefGroup = 94984867284FE57A007211DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94984865284FE57A007211DC /* TakeItEasyApp */,
+				9498487E284FE57C007211DC /* TakeItEasyAppTests */,
+				94984888284FE57D007211DC /* TakeItEasyAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94984864284FE57A007211DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
+				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
+				94984871284FE57A007211DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9498487D284FE57C007211DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94984887284FE57D007211DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94984862284FE57A007211DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
+				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
+				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
+				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9498487B284FE57C007211DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94984884284FE57C007211DC /* TakeItEasyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94984885284FE57D007211DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94984890284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift in Sources */,
+				9498488E284FE57D007211DC /* TakeItEasyAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94984881284FE57C007211DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94984865284FE57A007211DC /* TakeItEasyApp */;
+			targetProxy = 94984880284FE57C007211DC /* PBXContainerItemProxy */;
+		};
+		9498488B284FE57D007211DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94984865284FE57A007211DC /* TakeItEasyApp */;
+			targetProxy = 9498488A284FE57D007211DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9498486F284FE57A007211DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94984870284FE57A007211DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94984877284FE57C007211DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94984878284FE57C007211DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94984891284FE57D007211DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94984892284FE57D007211DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94984894284FE57D007211DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeItEasyApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94984895284FE57D007211DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeItEasyApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94984897284FE57D007211DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeItEasyApp.app/TakeItEasyApp";
+			};
+			name = Debug;
+		};
+		94984898284FE57D007211DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeItEasyApp.app/TakeItEasyApp";
+			};
+			name = Release;
+		};
+		9498489A284FE57D007211DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakeItEasyApp;
+			};
+			name = Debug;
+		};
+		9498489B284FE57D007211DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RevatureCa.TakeItEasyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakeItEasyApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94984861284FE57A007211DC /* Build configuration list for PBXProject "TakeItEasyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94984891284FE57D007211DC /* Debug */,
+				94984892284FE57D007211DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94984893284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94984894284FE57D007211DC /* Debug */,
+				94984895284FE57D007211DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94984896284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94984897284FE57D007211DC /* Debug */,
+				94984898284FE57D007211DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94984899284FE57D007211DC /* Build configuration list for PBXNativeTarget "TakeItEasyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9498489A284FE57D007211DC /* Debug */,
+				9498489B284FE57D007211DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94984873284FE57A007211DC /* TakeItEasyApp.xcdatamodel */,
+			);
+			currentVersion = 94984873284FE57A007211DC /* TakeItEasyApp.xcdatamodel */;
+			path = TakeItEasyApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9498485E284FE57A007211DC /* Project object */;
+}
