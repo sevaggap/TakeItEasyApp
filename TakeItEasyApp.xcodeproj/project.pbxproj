@@ -17,6 +17,10 @@
 		94984884284FE57C007211DC /* TakeItEasyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984883284FE57C007211DC /* TakeItEasyAppTests.swift */; };
 		9498488E284FE57D007211DC /* TakeItEasyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498488D284FE57D007211DC /* TakeItEasyAppUITests.swift */; };
 		94984890284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */; };
+		CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55482851359900E237E8 /* User+CoreDataClass.swift */; };
+		CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */; };
+		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
+		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		94984889284FE57D007211DC /* TakeItEasyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeItEasyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9498488D284FE57D007211DC /* TakeItEasyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeItEasyAppUITests.swift; sourceTree = "<group>"; };
 		9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeItEasyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE2E55482851359900E237E8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,8 @@
 		9498485D284FE57A007211DC = {
 			isa = PBXGroup;
 			children = (
+				CE2E55482851359900E237E8 /* User+CoreDataClass.swift */,
+				CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */,
 				94984868284FE57A007211DC /* TakeItEasyApp */,
 				94984882284FE57C007211DC /* TakeItEasyAppTests */,
 				9498488C284FE57D007211DC /* TakeItEasyAppUITests */,
@@ -109,6 +119,8 @@
 				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
 				9498487A284FE57C007211DC /* Info.plist */,
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
+				CE2E554C285135AF00E237E8 /* SignupViewController.swift */,
+				CE2E554E285135CD00E237E8 /* LoginViewController.swift */,
 			);
 			path = TakeItEasyApp;
 			sourceTree = "<group>";
@@ -262,9 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
+				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
+				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
+				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
+				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
