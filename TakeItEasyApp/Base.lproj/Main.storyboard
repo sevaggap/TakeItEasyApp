@@ -47,6 +47,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KsB-yy-4cM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7H9-uH-rx9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -101,14 +102,28 @@
                     <view key="view" contentMode="scaleToFill" id="bNL-Kz-oD8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmt-rE-cDy">
+                                <rect key="frame" x="20" y="69" width="94" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rRE-L3-uH6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRE-L3-uH6" firstAttribute="trailing" secondItem="Jmt-rE-cDy" secondAttribute="trailing" constant="300" id="1CU-gO-Qox"/>
+                            <constraint firstItem="rRE-L3-uH6" firstAttribute="bottom" secondItem="Jmt-rE-cDy" secondAttribute="bottom" constant="704" id="1zR-kZ-bOP"/>
+                            <constraint firstItem="Jmt-rE-cDy" firstAttribute="leading" secondItem="rRE-L3-uH6" secondAttribute="leading" constant="20" id="IJ5-Pm-bxO"/>
+                            <constraint firstItem="Jmt-rE-cDy" firstAttribute="top" secondItem="rRE-L3-uH6" secondAttribute="top" constant="25" id="IiY-MF-zEQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="Q6w-CM-3F5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DR-gf-mRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3568" y="82"/>
+            <point key="canvasLocation" x="3566.666666666667" y="81.696428571428569"/>
         </scene>
     </scenes>
     <resources>
