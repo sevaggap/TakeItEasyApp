@@ -28,7 +28,7 @@
         <!--Books-->
         <scene sceneID="p3Q-A6-S6g">
             <objects>
-                <viewController id="Xdg-HA-eqn" sceneMemberID="viewController">
+                <viewController id="Xdg-HA-eqn" customClass="BooksViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WdN-vR-e6f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

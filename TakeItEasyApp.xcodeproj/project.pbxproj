@@ -21,6 +21,7 @@
 		CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */; };
 		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
 		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
+		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9498486B284FE57A007211DC /* SceneDelegate.swift */,
 				9498486D284FE57A007211DC /* ViewController.swift */,
 				9498486F284FE57A007211DC /* Main.storyboard */,
+				F5712146285139BA003569D2 /* BooksViewController.swift */,
 				94984875284FE57C007211DC /* Assets.xcassets */,
 				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
 				9498487A284FE57C007211DC /* Info.plist */,
@@ -281,6 +284,7 @@
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
+				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
