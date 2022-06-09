@@ -4,6 +4,7 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="readData" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UsersNotes" representedClassName="UsersNotes" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String"/>
@@ -11,6 +12,7 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="74"/>
         <element name="UsersNotes" positionX="-63" positionY="9" width="128" height="74"/>
     </elements>
