@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25566C6528523A7B00F42C12 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25566C6328523A7B00F42C12 /* LoginValidation.swift */; };
+		25566C6628523A7B00F42C12 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25566C6428523A7B00F42C12 /* SignupValidation.swift */; };
 		9498486A284FE57A007211DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984869284FE57A007211DC /* AppDelegate.swift */; };
 		9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486B284FE57A007211DC /* SceneDelegate.swift */; };
 		9498486E284FE57A007211DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486D284FE57A007211DC /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25566C6328523A7B00F42C12 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginValidation.swift; path = "../../../BackUp/TakeItEasyApp-X/TakeItEasyApp/LoginValidation.swift"; sourceTree = "<group>"; };
+		25566C6428523A7B00F42C12 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupValidation.swift; path = "../../../BackUp/TakeItEasyApp-X/TakeItEasyApp/SignupValidation.swift"; sourceTree = "<group>"; };
 		94984866284FE57A007211DC /* TakeItEasyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94984869284FE57A007211DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9498486B284FE57A007211DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				9498486F284FE57A007211DC /* Main.storyboard */,
 				F5712146285139BA003569D2 /* BooksViewController.swift */,
 				94984875284FE57C007211DC /* Assets.xcassets */,
+				25566C6328523A7B00F42C12 /* LoginValidation.swift */,
+				25566C6428523A7B00F42C12 /* SignupValidation.swift */,
 				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
 				9498487A284FE57C007211DC /* Info.plist */,
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
@@ -283,7 +289,9 @@
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
+				25566C6628523A7B00F42C12 /* SignupValidation.swift in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
+				25566C6528523A7B00F42C12 /* LoginValidation.swift in Sources */,
 				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
