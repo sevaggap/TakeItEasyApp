@@ -21,6 +21,7 @@
 		CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */; };
 		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
 		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
+		CE2E55512851438900E237E8 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55502851438900E237E8 /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE2E55502851438900E237E8 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
 				CE2E554C285135AF00E237E8 /* SignupViewController.swift */,
 				CE2E554E285135CD00E237E8 /* LoginViewController.swift */,
+				CE2E55502851438900E237E8 /* DBHelper.swift */,
 			);
 			path = TakeItEasyApp;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
+				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,

@@ -8,7 +8,27 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+      var errorMsgSignUp = ""
+    
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var userEmail: UITextField!
+    
+    @IBOutlet weak var userPassword: UITextField!
+    
+    @IBOutlet weak var re_enterPassword: UITextField!
+    
+    
+    @IBOutlet weak var userMobile: UITextField!
+    
+    
+    @IBAction func getOTP(_ sender: Any) {
+    }
+    
+    @IBAction func signIn(_ sender: Any) {
+        //signup validation
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +36,6 @@ class SignupViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
