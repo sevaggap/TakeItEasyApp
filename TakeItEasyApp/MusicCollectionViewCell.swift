@@ -9,6 +9,8 @@ import UIKit
 
 class MusicCollectionViewCell: UICollectionViewCell {
     
+    
+    
     @IBOutlet weak var musicImage: UIImageView!
     @IBOutlet weak var musicLabel: UILabel!
     var animationDelay: Double?
