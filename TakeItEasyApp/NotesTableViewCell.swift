@@ -17,10 +17,10 @@ class NotesTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func deleteButtonPressed(_ sender: Any) {
-        NotesHelper.notes.deleteNote(noteId: noteId)
-        NotesViewController.notes = NotesHelper.notes.getNotes()
-        NotesViewController.tableObj.reloadData()
-    }
+//    @IBAction func deleteButtonPressed(_ sender: Any) {
+//        NotesHelper.notes.deleteNote(noteId: noteId)
+//        NotesViewController.notes = NotesHelper.notes.getNotes()
+//        NotesViewController.tableObj.reloadData()
+//    }
     
 }

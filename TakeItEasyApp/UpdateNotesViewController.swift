@@ -23,9 +23,8 @@ class UpdateNotesViewController: UIViewController {
     }
     
     @IBAction func updateNotePressed(_ sender: Any) {
-        
+        print("updating")
         NotesHelper.notes.updateNote(noteId: noteId, title: noteTitle.text!, body: noteBody.text!)
-        
     }
 
 }
