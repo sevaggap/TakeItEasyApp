@@ -13,10 +13,11 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var mainMusicLabel: UILabel!
     @IBOutlet weak var mainMusicImage: UIImageView!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var playPause: UIImageView!
     var playBool = false
     var uCell : MusicCollectionViewCell?
-    var musicList = ["City Lights", "Sky", "Hawai", "Enchante", "Sun is Shining"]
+    var musicList = ["City Lights", "Sky", "Hawaii", "Enchante", "Sun is Shining"]
     var Audio : AVAudioPlayer?
     var timer : Timer?
     
@@ -49,10 +50,12 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         Audio?.stop()
         
-        Audio?.play(atTime: 0.0)
+        Audio?.currentTime = 0
+        
         Audio?.stop()
-        Audio?.play()
+        
         playBool = true
+        playback()
         playPause.image = UIImage(systemName: "pause.fill")
         
         
@@ -97,6 +100,10 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     @IBAction func playPauseAction(_ sender: Any) {
+       playback()
+    }
+    
+    func playback(){
         if (playBool == true)
         {
            playPause.image = UIImage(systemName: "play.fill")
@@ -108,10 +115,16 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
             playPause.image = UIImage(systemName: "pause.fill")
             playBool = true
             Audio?.play()
-            //timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: updateTime, userInfo: <#T##Any?#>, repeats: <#T##Bool#>)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(progressCheck), userInfo:nil, repeats: true)
         }
+        
     }
     
+    @objc func progressCheck(){
+        progressBar.progress = Float(Audio!.currentTime/Audio!.duration)
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
