@@ -24,12 +24,12 @@
 ////add user validation functionality for login view controller
 //extension LoginViewController {
 //
-//
+//    
 //    //validate if inputs of username and password are valid and update error message accordingly
 //    func inputValidation(username : String?, password : String?) -> Bool {
-//
+//        
 //        var inputIsValid = false
-//
+//        
 //        if !inputNotNil(input: username) {
 //            if inputNotNil(input: password) {
 //                errorMsgSignIn = "Please enter your username."
@@ -37,7 +37,7 @@
 //                errorMsgSignIn = "Please enter your username and password."
 //            }
 //        }
-//
+//        
 //        if inputNotNil(input: username) {
 //            if inputNotNil(input: password) {
 //                inputIsValid = true
@@ -45,10 +45,10 @@
 //                errorMsgSignIn = "Please enter your password."
 //            }
 //        }
-//
+//        
 //        return inputIsValid
 //    }
-//
+//    
 //    //validate if password entered is correct and update error message accordingly
 //    func credentialValidation(email : String, password : String) -> Bool {
 //
@@ -72,7 +72,7 @@
 //
 ////add functionalities to DBHelperUser to retrieve user information
 //extension DBHelperUser {
-//
+//    
 //    //retrieve user as an instance of "User" entity to obtain correct passwords
 //    func readUser (email : String) -> User {
 //        var user = User()
@@ -92,7 +92,7 @@
 //        }
 //        return user
 //    }
-//
+//    
 //    //retrieve user information to check if email is registered already
 //    func readUser (email : String) -> Bool {
 //        var emailIsRegistered = false
