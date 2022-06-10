@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		255F7E2028523EBC0050BEFA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E1F28523EBC0050BEFA /* LoginValidation.swift */; };
+		255F7E2228523F000050BEFA /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E2128523F000050BEFA /* SignupValidation.swift */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
 		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
 		9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */; };
@@ -14,8 +16,6 @@
 		9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B928514763009F9205 /* NotesTableViewCell.swift */; };
 		9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */; };
 		9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9BD28514B35009F9205 /* AddNotesViewController.swift */; };
-		255F7E2028523EBC0050BEFA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E1F28523EBC0050BEFA /* LoginValidation.swift */; };
-		255F7E2228523F000050BEFA /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E2128523F000050BEFA /* SignupValidation.swift */; };
 		9498486A284FE57A007211DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984869284FE57A007211DC /* AppDelegate.swift */; };
 		9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486B284FE57A007211DC /* SceneDelegate.swift */; };
 		9498486E284FE57A007211DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486D284FE57A007211DC /* ViewController.swift */; };
@@ -30,7 +30,7 @@
 		CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */; };
 		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
 		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
-		CE2E55512851438900E237E8 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55502851438900E237E8 /* DBHelper.swift */; };
+		CE2E55512851438900E237E8 /* DBHelperUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55502851438900E237E8 /* DBHelperUser.swift */; };
 		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		255F7E1F28523EBC0050BEFA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
+		255F7E2128523F000050BEFA /* SignupValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
 		9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -59,8 +61,6 @@
 		9447B9B928514763009F9205 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotesViewController.swift; sourceTree = "<group>"; };
 		9447B9BD28514B35009F9205 /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
-		255F7E1F28523EBC0050BEFA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
-		255F7E2128523F000050BEFA /* SignupValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		94984866284FE57A007211DC /* TakeItEasyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94984869284FE57A007211DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9498486B284FE57A007211DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CE2E55502851438900E237E8 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		CE2E55502851438900E237E8 /* DBHelperUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelperUser.swift; sourceTree = "<group>"; };
 		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +151,7 @@
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
 				CE2E554C285135AF00E237E8 /* SignupViewController.swift */,
 				CE2E554E285135CD00E237E8 /* LoginViewController.swift */,
-				CE2E55502851438900E237E8 /* DBHelper.swift */,
+				CE2E55502851438900E237E8 /* DBHelperUser.swift */,
 				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
 				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
 			);
@@ -316,7 +316,7 @@
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
 				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
-				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
+				CE2E55512851438900E237E8 /* DBHelperUser.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */,

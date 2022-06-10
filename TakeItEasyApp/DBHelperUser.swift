@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 import CoreData
-class DBHelper{
-    static var dbHelper = DBHelper()
+class DBHelperUser{
+    static var dbHelperUser = DBHelperUser()
     let context  = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     
@@ -29,21 +29,7 @@ class DBHelper{
          
      }
   
-    func doesNameExist(nameValue: String) -> Bool{
-                var user = User()
-                var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-                fetchRequest.predicate = NSPredicate(format: "namevalue == %@", nameValue)
-                do{
-                    let login  =  try context?.fetch(fetchRequest)
-                    if (login?.count != 0){
-                            return true
-                        }
-                    }
-                catch{
-                    print("error in update")
-                }
-                return false
-            }
+   
     
     
     
