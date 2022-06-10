@@ -21,6 +21,11 @@
 		CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */; };
 		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
 		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
+		E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EB81DD28539B9600BCBC40 /* Friday.png */; };
+		E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6228228524256004FD5C6 /* MusicViewController.swift */; };
+		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
+		E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D228530FEF004FD5C6 /* Someday.mp3 */; };
+		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
 		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9EB81DD28539B9600BCBC40 /* Friday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friday.png; sourceTree = "<group>"; };
+		E9F6228228524256004FD5C6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9F622D228530FEF004FD5C6 /* Someday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Someday.mp3; sourceTree = "<group>"; };
+		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
 		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,12 +123,15 @@
 		94984868284FE57A007211DC /* TakeItEasyApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9F622812852423E004FD5C6 /* Music */,
 				94984869284FE57A007211DC /* AppDelegate.swift */,
 				9498486B284FE57A007211DC /* SceneDelegate.swift */,
 				9498486D284FE57A007211DC /* ViewController.swift */,
 				9498486F284FE57A007211DC /* Main.storyboard */,
 				F5712146285139BA003569D2 /* BooksViewController.swift */,
 				94984875284FE57C007211DC /* Assets.xcassets */,
+				E9EB81DD28539B9600BCBC40 /* Friday.png */,
+				E9F622D42853170B004FD5C6 /* Dark Ocean.png */,
 				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
 				9498487A284FE57C007211DC /* Info.plist */,
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
@@ -143,6 +156,16 @@
 				9498488F284FE57D007211DC /* TakeItEasyAppUITestsLaunchTests.swift */,
 			);
 			path = TakeItEasyAppUITests;
+			sourceTree = "<group>";
+		};
+		E9F622812852423E004FD5C6 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
+				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
+				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +274,10 @@
 			files = (
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
+				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
+				E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */,
+				E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +307,9 @@
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
+				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
+				E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
 				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
