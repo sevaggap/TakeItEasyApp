@@ -29,6 +29,7 @@ class SignupViewController: UIViewController {
                if credentialValidation(email: userEmail.text!){
                    //getOTP(<#T##sender: Any##Any#>)
                    print("validated")
+                   print("hello")
                    hideLabelErrormsg()
                }
                 else {
