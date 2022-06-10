@@ -15,6 +15,7 @@ class NotesHelper {
      
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
+    // get all the notes
     func getNotes() -> [UsersNotes]{
          
         var notes = [UsersNotes]()
@@ -31,6 +32,7 @@ class NotesHelper {
         
     }
     
+    // add a note to the database
     func addNote(title : String, body : String){
         
         let note = NSEntityDescription.insertNewObject(forEntityName: "UsersNotes", into: context!) as! UsersNotes
@@ -46,7 +48,9 @@ class NotesHelper {
         }
         
     }
-     
+    
+    
+    // update an existing note
     func updateNote(noteId : Int64, title : String, body : String){
         
         var note = UsersNotes()
@@ -67,6 +71,7 @@ class NotesHelper {
         }
     }
     
+    // delete one note via the noteId
     func deleteNote(noteId: Int64){
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersNotes")
