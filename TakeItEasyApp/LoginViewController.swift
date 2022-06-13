@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         if inputValidation(username: loginId.text, password: loginPassword.text){
             if credentialValidation(email: loginId.text!, password: loginPassword.text!){
              hideLabelErrormsg()
-            let storyboard = UIStoryboard(name: "Bristy", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
                 tabBar.modalPresentationStyle = .fullScreen
                 self.present(tabBar, animated: true, completion: nil)
