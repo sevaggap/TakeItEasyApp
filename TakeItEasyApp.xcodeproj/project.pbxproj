@@ -36,6 +36,14 @@
 		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
 		E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D228530FEF004FD5C6 /* Someday.mp3 */; };
 		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
+		F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704930285792600062DCB7 /* PdfScreenViewController.swift */; };
+		F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */; };
+		F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */; };
+		F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */; };
+		F570493B285793540062DCB7 /* Zahid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F570493A285793540062DCB7 /* Zahid.storyboard */; };
+		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
+		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
+		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
 		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +98,14 @@
 		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9F622D228530FEF004FD5C6 /* Someday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Someday.mp3; sourceTree = "<group>"; };
 		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
+		F5704930285792600062DCB7 /* PdfScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfScreenViewController.swift; sourceTree = "<group>"; };
+		F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
+		F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F570493A285793540062DCB7 /* Zahid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Zahid.storyboard; sourceTree = "<group>"; };
+		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
+		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
+		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
 		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,13 +161,12 @@
 		94984868284FE57A007211DC /* TakeItEasyApp */ = {
 			isa = PBXGroup;
 			children = (
-				F570492D285790980062DCB7 /* Zahid Books */,
+				F570492F2857920D0062DCB7 /* ZahidBook */,
 				E9F622812852423E004FD5C6 /* Music */,
 				94984869284FE57A007211DC /* AppDelegate.swift */,
 				9498486B284FE57A007211DC /* SceneDelegate.swift */,
 				9498486D284FE57A007211DC /* ViewController.swift */,
 				9498486F284FE57A007211DC /* Main.storyboard */,
-				F5712146285139BA003569D2 /* BooksViewController.swift */,
 				9447B9AD28514170009F9205 /* NotesViewController.swift */,
 				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
 				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
@@ -199,12 +214,20 @@
 			name = Music;
 			sourceTree = "<group>";
 		};
-		F570492D285790980062DCB7 /* Zahid Books */ = {
+		F570492F2857920D0062DCB7 /* ZahidBook */ = {
 			isa = PBXGroup;
 			children = (
+				F570493A285793540062DCB7 /* Zahid.storyboard */,
+				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
+				F570493C285795690062DCB7 /* hpbook2.pdf */,
+				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
+				F5712146285139BA003569D2 /* BooksViewController.swift */,
+				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
+				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
+				F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */,
+				F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */,
 			);
-			name = "Zahid Books";
-			path = ..;
+			path = ZahidBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,12 +334,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
+				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
+				F570493B285793540062DCB7 /* Zahid.storyboard in Resources */,
 				E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */,
 				E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */,
+				F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,15 +378,19 @@
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
 				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
+				F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */,
 				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
+				F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */,
+				F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */,
 				9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				255F7E2228523F000050BEFA /* SignupValidation.swift in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
+				F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */,
 				255F7E2028523EBC0050BEFA /* LoginValidation.swift in Sources */,
 				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
 			);
