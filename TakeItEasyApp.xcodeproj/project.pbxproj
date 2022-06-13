@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
 		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		CE3C511C28579F5300A51227 /* Xavier */ = {
 			isa = PBXGroup;
 			children = (
+				257D5CDB2857D90300505D25 /* Xavier.storyboard */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
 				CE3C511F28579F7200A51227 /* SignupValidation.swift */,
 			);
@@ -372,6 +375,7 @@
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
+				257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
@@ -465,6 +469,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		257D5CDB2857D90300505D25 /* Xavier.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257D5CDC2857D90300505D25 /* Base */,
+			);
+			name = Xavier.storyboard;
+			sourceTree = "<group>";
+		};
 		9498486F284FE57A007211DC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -620,7 +632,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +660,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
