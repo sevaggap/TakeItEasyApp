@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
+		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
 		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
 		9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */; };
@@ -33,6 +35,7 @@
 		CE3C511B28579E7600A51227 /* DBHelperUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511A28579E7600A51227 /* DBHelperUser.swift */; };
 		CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511D28579F6600A51227 /* LoginValidation.swift */; };
 		CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511F28579F7200A51227 /* SignupValidation.swift */; };
+		E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */; };
 		E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EB81DD28539B9600BCBC40 /* Friday.png */; };
 		E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6228228524256004FD5C6 /* MusicViewController.swift */; };
 		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
@@ -46,7 +49,6 @@
 		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
 		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
 		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
-		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
+		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
 		9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		CE3C511A28579E7600A51227 /* DBHelperUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelperUser.swift; sourceTree = "<group>"; };
 		CE3C511D28579F6600A51227 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		CE3C511F28579F7200A51227 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
+		E96BDE5E2857B12500A304A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/JamesMusic.storyboard; sourceTree = "<group>"; };
 		E9EB81DD28539B9600BCBC40 /* Friday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friday.png; sourceTree = "<group>"; };
 		E9F6228228524256004FD5C6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,7 +115,6 @@
 		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
 		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
 		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
-		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		942FE8FC28579CCB00CEBEF2 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				942FE8FD28579D2200CEBEF2 /* Notes.storyboard */,
+				9447B9AD28514170009F9205 /* NotesViewController.swift */,
+				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
+				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
+				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
+				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		9498485D284FE57A007211DC = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +182,7 @@
 		94984868284FE57A007211DC /* TakeItEasyApp */ = {
 			isa = PBXGroup;
 			children = (
+				942FE8FC28579CCB00CEBEF2 /* Notes */,
 				CE3C511C28579F5300A51227 /* Xavier */,
 				CE3C511728579CFC00A51227 /* BristyLogin */,
 				F570492F2857920D0062DCB7 /* ZahidBook */,
@@ -173,9 +191,6 @@
 				9498486B284FE57A007211DC /* SceneDelegate.swift */,
 				9498486D284FE57A007211DC /* ViewController.swift */,
 				9498486F284FE57A007211DC /* Main.storyboard */,
-				9447B9AD28514170009F9205 /* NotesViewController.swift */,
-				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
-				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
 				94984875284FE57C007211DC /* Assets.xcassets */,
 				E9EB81DD28539B9600BCBC40 /* Friday.png */,
 				E9F622D42853170B004FD5C6 /* Dark Ocean.png */,
@@ -183,8 +198,6 @@
 				9498487A284FE57C007211DC /* Info.plist */,
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
 				CE2E55502851438900E237E8 /* DBHelper.swift */,
-				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
-				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
 			);
 			path = TakeItEasyApp;
 			sourceTree = "<group>";
@@ -220,6 +233,7 @@
 		CE3C511C28579F5300A51227 /* Xavier */ = {
 			isa = PBXGroup;
 			children = (
+				257D5CDB2857D90300505D25 /* Xavier.storyboard */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
 				CE3C511F28579F7200A51227 /* SignupValidation.swift */,
 			);
@@ -229,6 +243,7 @@
 		E9F622812852423E004FD5C6 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */,
 				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
 				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
 				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
@@ -243,7 +258,6 @@
 				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
 				F570493C285795690062DCB7 /* hpbook2.pdf */,
 				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
-				F5712146285139BA003569D2 /* BooksViewController.swift */,
 				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
 				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
 				F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */,
@@ -359,8 +373,11 @@
 				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
 				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
+				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
+				257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
+				E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
 				F570493B285793540062DCB7 /* Zahid.storyboard in Resources */,
 				E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */,
@@ -416,7 +433,6 @@
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
 				F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */,
 				CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */,
-				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +469,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		257D5CDB2857D90300505D25 /* Xavier.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257D5CDC2857D90300505D25 /* Base */,
+			);
+			name = Xavier.storyboard;
+			sourceTree = "<group>";
+		};
 		9498486F284FE57A007211DC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -467,6 +491,14 @@
 				94984878284FE57C007211DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E96BDE5E2857B12500A304A8 /* Base */,
+			);
+			name = JamesMusic.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -600,7 +632,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +660,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
