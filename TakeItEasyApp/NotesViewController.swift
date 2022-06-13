@@ -20,6 +20,8 @@ class NotesViewController: UIViewController {
     var searchedNotes = [String]()
     var searching  = false
      
+    // test push
+    
     override func viewWillAppear(_ animated: Bool) {
         notesTitles.removeAll()
         NotesViewController.notes = NotesHelper.notes.getNotes()
