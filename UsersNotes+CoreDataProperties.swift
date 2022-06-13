@@ -2,7 +2,7 @@
 //  UsersNotes+CoreDataProperties.swift
 //  TakeItEasyApp
 //
-//  Created by Sevag Gaprielian on 2022-06-08.
+//  Created by Sevag Gaprielian on 2022-06-13.
 //
 //
 
@@ -16,9 +16,11 @@ extension UsersNotes {
         return NSFetchRequest<UsersNotes>(entityName: "UsersNotes")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var body: String?
+    @NSManaged public var isFavourite: Bool
     @NSManaged public var noteId: Int64
+    @NSManaged public var title: String?
+    @NSManaged public var date: Date?
 
 }
 

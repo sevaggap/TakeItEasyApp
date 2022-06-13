@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class NotesViewController: UIViewController {
 
@@ -19,15 +20,14 @@ class NotesViewController: UIViewController {
     var notesTitles = [String]()
     var searchedNotes = [String]()
     var searching  = false
-     
-    // test push
-    
+         
     override func viewWillAppear(_ animated: Bool) {
         notesTitles.removeAll()
         NotesViewController.notes = NotesHelper.notes.getNotes()
         for note in NotesViewController.notes {
             notesTitles.append(note.title!)
         }
+        print(notesTitles)
         notesTable.reloadData()
     }
     
@@ -49,6 +49,38 @@ class NotesViewController: UIViewController {
         
     }
     
+    func dateFormat(date : Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "EST")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+    
+        let hourFormatter = DateFormatter()
+        hourFormatter.timeZone = TimeZone(abbreviation: "EST")
+        hourFormatter.dateFormat = "HH"
+        
+        let minuteFormatter = DateFormatter()
+        minuteFormatter.timeZone = TimeZone(abbreviation: "EST")
+        minuteFormatter.dateFormat = "mm"
+        
+        var hourString = hourFormatter.string(from: date)
+        let hourInt = Int(hourString)
+        let minuteString = minuteFormatter.string(from: date)
+        
+        if hourInt! > 12 {
+             hourString = "\(String(hourInt!-12)):\(minuteString) PM"
+        } else if hourInt! == 12 {
+            hourString = "\(String(hourInt!)):\(minuteString) PM"
+        } else if hourInt! == 0 {
+            hourString = "\(String(hourInt! + 12)):\(minuteString) AM"
+        } else {
+            hourString = "\(String(hourInt!)):\(minuteString) AM"
+        }
+        
+        return dateFormatter.string(from: date) + " " + hourString
+        
+    }
+    
 }
 
 extension NotesViewController : UISearchBarDelegate{
@@ -60,6 +92,7 @@ extension NotesViewController : UISearchBarDelegate{
             notesTable.reloadData()
             } else {
                 searchedNotes = notesTitles.filter({$0.prefix(searchText.count) == searchText})
+                print(searchedNotes)
                 searching = true
                 notesTable.reloadData()
                 print(searching)
@@ -67,14 +100,7 @@ extension NotesViewController : UISearchBarDelegate{
         }
         
     }
-   
-//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        searching = false
-//        NotesViewController.notes.removeAll()
-//        NotesViewController.notes = NotesHelper.notes.getNotes()
-//        notesTable.reloadData()
-//    }
-    
+
 }
 
 extension NotesViewController : UITableViewDataSource {
@@ -90,14 +116,21 @@ extension NotesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesTableViewCell
-        
-        if searching {
+
+        print(NotesViewController.notes[indexPath.row].date)
+        if NotesViewController.notes[indexPath.row].isFavourite {
+            cell.noteFavouriteImage.image = UIImage(systemName: "heart.fill")
+            cell.noteTitle.text =  NotesViewController.notes[indexPath.row].title
+            cell.noteDate.text = dateFormat(date: NotesViewController.notes[indexPath.row].date!)
+        } else if searching {
             cell.noteTitle.text = searchedNotes[indexPath.row]
+            cell.noteFavouriteImage.image =  nil
+            cell.noteDate.text = ""
         } else {
             cell.noteTitle.text =  NotesViewController.notes[indexPath.row].title
+            cell.noteDate.text = dateFormat(date: NotesViewController.notes[indexPath.row].date!)
+            cell.noteFavouriteImage.image = nil
         }
-
-//        cell.noteId = NotesViewController.notes[indexPath.row].noteId
         
         return cell
     }
@@ -142,8 +175,14 @@ extension NotesViewController : UITableViewDelegate{
 
         })
         
-        let favouriteAction = UITableViewRowAction(style: .normal, title: "Favourite", handler: {_,_ in
-            print("favourite")
+        let note = NotesViewController.notes[indexPath.row]
+        let favouriteActionTitle = note.isFavourite ? "Unfavourite" : "Favourite"
+        
+        let favouriteAction = UITableViewRowAction(style: .normal, title: favouriteActionTitle, handler: {_,_ in
+            
+            NotesHelper.notes.favouriteNote(noteId: NotesViewController.notes[indexPath.row].noteId)
+            NotesViewController.notes = NotesHelper.notes.getNotes()
+            self.notesTable.reloadData()
             
         })
         
@@ -153,12 +192,4 @@ extension NotesViewController : UITableViewDelegate{
     }
     
 }
-//
-//let alertUI = UIAlertController(title: "Registration Successful", message: "You can proceed with login", preferredStyle: .actionSheet)
-//            let okayAction = UIAlertAction(title: "Okay", style: .default){
-//                (action) in
-//                self.dismiss(animated: true, completion: {
-//                    self.dismiss(animated: true)
-//                })
-//
-//            }
+

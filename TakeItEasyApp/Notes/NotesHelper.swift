@@ -39,6 +39,7 @@ class NotesHelper {
         note.noteId = Int64.random(in: 1...1000000)
         note.title = title
         note.body = body
+        note.date = Date()
         
         do {
             try context?.save()
@@ -63,6 +64,7 @@ class NotesHelper {
                 note = updatedNote?.first as! UsersNotes
                 note.title = title
                 note.body = body
+                note.date = Date()
                 try context?.save()
                 print("note updated")
             }
@@ -88,6 +90,31 @@ class NotesHelper {
             }
         }  catch {
             print("could not delete note")
+        }
+    }
+    
+    func favouriteNote(noteId : Int64) {
+        
+        var note = UsersNotes()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersNotes")
+        fetchRequest.predicate = NSPredicate(format: "noteId == %@", String(noteId))
+        
+        do {
+            let favouriteNote = try context?.fetch(fetchRequest)
+            if favouriteNote?.count != 0 {
+                note = favouriteNote?.first as! UsersNotes
+                if(note.isFavourite){
+                    note.isFavourite = false
+                    try context?.save()
+                    print("note favourited")
+                } else {
+                    note.isFavourite = true
+                    try context?.save()
+                    print("note unfavourited")
+                }
+            }
+        } catch {
+            print("could not favourite note")
         }
     }
     
