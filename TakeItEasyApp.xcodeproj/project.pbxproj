@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		252F30862857DF2A00224150 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252F30842857DF2A00224150 /* Search.storyboard */; };
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
@@ -70,7 +69,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		252F30852857DF2A00224150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TakeItEasyApp/Base.lproj/Search.storyboard; sourceTree = SOURCE_ROOT; };
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -144,14 +142,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		252F30832857DF0100224150 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				252F30842857DF2A00224150 /* Search.storyboard */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		942FE8FC28579CCB00CEBEF2 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +182,6 @@
 		94984868284FE57A007211DC /* TakeItEasyApp */ = {
 			isa = PBXGroup;
 			children = (
-				252F30832857DF0100224150 /* Search */,
 				942FE8FC28579CCB00CEBEF2 /* Notes */,
 				CE3C511C28579F5300A51227 /* Xavier */,
 				CE3C511728579CFC00A51227 /* BristyLogin */,
@@ -385,7 +374,6 @@
 				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
-				252F30862857DF2A00224150 /* Search.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
 				257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
@@ -481,14 +469,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		252F30842857DF2A00224150 /* Search.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				252F30852857DF2A00224150 /* Base */,
-			);
-			name = Search.storyboard;
-			sourceTree = "<group>";
-		};
 		257D5CDB2857D90300505D25 /* Xavier.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
