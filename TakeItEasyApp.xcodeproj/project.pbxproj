@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
+		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
+		9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */; };
+		9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B6285143D5009F9205 /* UsersNotes+CoreDataProperties.swift */; };
+		9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9B928514763009F9205 /* NotesTableViewCell.swift */; };
+		9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */; };
+		9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9BD28514B35009F9205 /* AddNotesViewController.swift */; };
+		255F7E2028523EBC0050BEFA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E1F28523EBC0050BEFA /* LoginValidation.swift */; };
+		255F7E2228523F000050BEFA /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7E2128523F000050BEFA /* SignupValidation.swift */; };
 		9498486A284FE57A007211DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94984869284FE57A007211DC /* AppDelegate.swift */; };
 		9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486B284FE57A007211DC /* SceneDelegate.swift */; };
 		9498486E284FE57A007211DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498486D284FE57A007211DC /* ViewController.swift */; };
@@ -22,6 +31,12 @@
 		CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554C285135AF00E237E8 /* SignupViewController.swift */; };
 		CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E554E285135CD00E237E8 /* LoginViewController.swift */; };
 		F502BC5C28578435008D40CE /* Zahid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F502BC5A28578435008D40CE /* Zahid.storyboard */; };
+		E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EB81DD28539B9600BCBC40 /* Friday.png */; };
+		E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6228228524256004FD5C6 /* MusicViewController.swift */; };
+		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
+		E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D228530FEF004FD5C6 /* Someday.mp3 */; };
+		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
+		CE2E55512851438900E237E8 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E55502851438900E237E8 /* DBHelper.swift */; };
 		F5712147285139BA003569D2 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5712146285139BA003569D2 /* BooksViewController.swift */; };
 		F571214B2851502F003569D2 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571214A2851502F003569D2 /* GeneralCollectionViewCell.swift */; };
 		F571214D2851508C003569D2 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571214C2851508C003569D2 /* TechnicalCollectionViewCell.swift */; };
@@ -50,6 +65,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
+		9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9447B9B6285143D5009F9205 /* UsersNotes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9447B9B928514763009F9205 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotesViewController.swift; sourceTree = "<group>"; };
+		9447B9BD28514B35009F9205 /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
+		255F7E1F28523EBC0050BEFA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
+		255F7E2128523F000050BEFA /* SignupValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		94984866284FE57A007211DC /* TakeItEasyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94984869284FE57A007211DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9498486B284FE57A007211DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +93,12 @@
 		CE2E554C285135AF00E237E8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE2E554E285135CD00E237E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F502BC5B28578435008D40CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Zahid.storyboard; sourceTree = "<group>"; };
+		E9EB81DD28539B9600BCBC40 /* Friday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friday.png; sourceTree = "<group>"; };
+		E9F6228228524256004FD5C6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9F622D228530FEF004FD5C6 /* Someday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Someday.mp3; sourceTree = "<group>"; };
+		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
+		CE2E55502851438900E237E8 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		F5712146285139BA003569D2 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F571214A2851502F003569D2 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		F571214C2851508C003569D2 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +137,8 @@
 		9498485D284FE57A007211DC = {
 			isa = PBXGroup;
 			children = (
+				9447B9B5285143D5009F9205 /* UsersNotes+CoreDataClass.swift */,
+				9447B9B6285143D5009F9205 /* UsersNotes+CoreDataProperties.swift */,
 				CE2E55482851359900E237E8 /* User+CoreDataClass.swift */,
 				CE2E55492851359900E237E8 /* User+CoreDataProperties.swift */,
 				94984868284FE57A007211DC /* TakeItEasyApp */,
@@ -130,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F571215228523A30003569D2 /* PDFBooks */,
+				E9F622812852423E004FD5C6 /* Music */,
 				94984869284FE57A007211DC /* AppDelegate.swift */,
 				9498486B284FE57A007211DC /* SceneDelegate.swift */,
 				9498486D284FE57A007211DC /* ViewController.swift */,
@@ -140,12 +173,22 @@
 				F571214A2851502F003569D2 /* GeneralCollectionViewCell.swift */,
 				F571214C2851508C003569D2 /* TechnicalCollectionViewCell.swift */,
 				F571214E285150B2003569D2 /* RecipesCollectionViewCell.swift */,
+				9447B9AD28514170009F9205 /* NotesViewController.swift */,
+				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
+				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
 				94984875284FE57C007211DC /* Assets.xcassets */,
+				E9EB81DD28539B9600BCBC40 /* Friday.png */,
+				E9F622D42853170B004FD5C6 /* Dark Ocean.png */,
 				94984877284FE57C007211DC /* LaunchScreen.storyboard */,
+				255F7E1F28523EBC0050BEFA /* LoginValidation.swift */,
+				255F7E2128523F000050BEFA /* SignupValidation.swift */,
 				9498487A284FE57C007211DC /* Info.plist */,
 				94984872284FE57A007211DC /* TakeItEasyApp.xcdatamodeld */,
 				CE2E554C285135AF00E237E8 /* SignupViewController.swift */,
 				CE2E554E285135CD00E237E8 /* LoginViewController.swift */,
+				CE2E55502851438900E237E8 /* DBHelper.swift */,
+				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
+				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
 			);
 			path = TakeItEasyApp;
 			sourceTree = "<group>";
@@ -168,13 +211,18 @@
 			sourceTree = "<group>";
 		};
 		F571215228523A30003569D2 /* PDFBooks */ = {
+		E9F622812852423E004FD5C6 /* Music */ = {
 			isa = PBXGroup;
 			children = (
 				F571215528523A64003569D2 /* hpbook1.pdf */,
 				F571215428523A63003569D2 /* hpbook2.pdf */,
 				F571215328523A61003569D2 /* hpbook3.pdf */,
+				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
+				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
+				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
 			);
 			path = PDFBooks;
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +334,11 @@
 				F571215628523A64003569D2 /* hpbook3.pdf in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
 				F502BC5C28578435008D40CE /* Zahid.storyboard in Resources */,
+				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
 				F571215828523A64003569D2 /* hpbook1.pdf in Resources */,
+				E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */,
+				E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,16 +365,28 @@
 			files = (
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
+				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				F571214B2851502F003569D2 /* GeneralCollectionViewCell.swift in Sources */,
+				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
+				9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */,
+				9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */,
+				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
+				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
+				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
+				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				F571214D2851508C003569D2 /* TechnicalCollectionViewCell.swift in Sources */,
 				F571214F285150B2003569D2 /* RecipesCollectionViewCell.swift in Sources */,
 				F571215128523966003569D2 /* PdfScreenViewController.swift in Sources */,
+				E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */,
+				9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
+				255F7E2228523F000050BEFA /* SignupValidation.swift in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
+				255F7E2028523EBC0050BEFA /* LoginValidation.swift in Sources */,
 				F5712147285139BA003569D2 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
