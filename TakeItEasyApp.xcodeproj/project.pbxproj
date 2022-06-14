@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */; };
+		251BB33D2858B4E600A44D4C /* Class-Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BB33C2858B4E600A44D4C /* Class-Quiz.swift */; };
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBHelperQuiz-SQLite.swift"; sourceTree = "<group>"; };
+		251BB33C2858B4E600A44D4C /* Class-Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class-Quiz.swift"; sourceTree = "<group>"; };
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				257D5CDB2857D90300505D25 /* Xavier.storyboard */,
+				251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */,
+				251BB33C2858B4E600A44D4C /* Class-Quiz.swift */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
 				CE3C511F28579F7200A51227 /* SignupValidation.swift */,
 			);
@@ -427,8 +433,10 @@
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
+				251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
+				251BB33D2858B4E600A44D4C /* Class-Quiz.swift in Sources */,
 				9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */,
 				9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */,
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
