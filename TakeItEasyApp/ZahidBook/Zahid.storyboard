@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Books View Controller-->
+        <!--Books-->
         <scene sceneID="p3Q-A6-S6g">
             <objects>
                 <viewController storyboardIdentifier="booksVC" id="Xdg-HA-eqn" customClass="BooksViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,6 +161,7 @@
                             <constraint firstAttribute="bottom" secondItem="1g9-Xz-DKl" secondAttribute="bottom" id="JAB-oW-Jt0"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="1D2-Qv-X1N"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="a23-aT-8OM">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="T1a-jn-vg1">
@@ -172,7 +173,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CV1" destination="xmQ-dT-vhu" id="O7o-He-x19"/>
                         <outlet property="CV2" destination="sus-pe-5Y1" id="6D9-3f-Yym"/>
@@ -201,6 +202,7 @@
     </scenes>
     <resources>
         <image name="TakeItEasyBackground" width="1126" height="2437"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="hp1" width="1500" height="2253"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
