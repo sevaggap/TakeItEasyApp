@@ -21,6 +21,7 @@ class NotesViewController: UIViewController {
     var searchedNotes = [String]()
     var searching  = false
          
+    // when the view will appear, the notes are retrived from core data
     override func viewWillAppear(_ animated: Bool) {
         notesTitles.removeAll()
         NotesViewController.notes = NotesHelper.notes.getNotes()
@@ -31,6 +32,7 @@ class NotesViewController: UIViewController {
         notesTable.reloadData()
     }
     
+    // when the view will load, the notes are retrived from core data
     override func viewDidLoad() {
         super.viewDidLoad()
         NotesViewController.notes = NotesHelper.notes.getNotes()
@@ -42,13 +44,16 @@ class NotesViewController: UIViewController {
 
     }
 
+    // when the new note button is pressed, a screen will open where the user can enter new notes
     @IBAction func newNotePressed(_ sender: Any) {
         
-        let saveNoteScreen = storyboard?.instantiateViewController(withIdentifier: "saveNotes")
-        navigationController?.pushViewController(saveNoteScreen!, animated: true)
+        let storyboard = UIStoryboard(name: "Notes", bundle: nil)
+        let saveNoteScreen = storyboard.instantiateViewController(withIdentifier: "saveNotes")
+        navigationController?.pushViewController(saveNoteScreen, animated: true)
         
     }
     
+    // this function handles the formatting of the date for notes, using logic to display AM or PM depening on the hour value
     func dateFormat(date : Date) -> String {
         
         let dateFormatter = DateFormatter()
@@ -83,6 +88,7 @@ class NotesViewController: UIViewController {
     
 }
 
+// this function searchs through the note titles based on what the user types in the serach bar
 extension NotesViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
@@ -103,6 +109,7 @@ extension NotesViewController : UISearchBarDelegate{
 
 }
 
+// specifies the number of rows for the table
 extension NotesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
@@ -117,7 +124,7 @@ extension NotesViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesTableViewCell
 
-        print(NotesViewController.notes[indexPath.row].date)
+        // checks if the note is favourited or if the user is searching and updates what is being displayed in the table
         if NotesViewController.notes[indexPath.row].isFavourite {
             cell.noteFavouriteImage.image = UIImage(systemName: "heart.fill")
             cell.noteTitle.text =  NotesViewController.notes[indexPath.row].title
@@ -137,13 +144,15 @@ extension NotesViewController : UITableViewDataSource {
     
 }
 
+// specifies what happens when a row of the table is selected
 extension NotesViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.row, NotesViewController.notes[indexPath.row].title,NotesViewController.notes[indexPath.row].body)
         
-        let updateNoteScreen = storyboard?.instantiateViewController(withIdentifier: "updateNotes") as! UpdateNotesViewController
+        let storyboard = UIStoryboard(name: "Notes", bundle: nil)
+        let updateNoteScreen = storyboard.instantiateViewController(withIdentifier: "updateNotes") as! UpdateNotesViewController
         
         print(searching)
         
