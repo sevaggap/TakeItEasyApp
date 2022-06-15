@@ -10,6 +10,7 @@
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
+		9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9423701B2858D733006BE3DF /* SearchViewController.swift */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
 		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
@@ -74,6 +75,7 @@
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		9423701B2858D733006BE3DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9413CF932857E8D2007E7989 /* Search.storyboard */,
+				9423701B2858D733006BE3DF /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
+				9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */,
 				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
