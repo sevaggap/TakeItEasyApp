@@ -53,6 +53,7 @@
 		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
 		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
 		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
+		F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049842858D6A70062DCB7 /* BooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
 		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
 		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
+		F57049842858D6A70062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
 				F570493C285795690062DCB7 /* hpbook2.pdf */,
 				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
+				F57049842858D6A70062DCB7 /* BooksViewController.swift */,
 				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
 				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
 				F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */,
@@ -434,6 +437,7 @@
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
 				251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */,
+				F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
 				251BB33D2858B4E600A44D4C /* Class-Quiz.swift in Sources */,

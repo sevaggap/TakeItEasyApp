@@ -2,6 +2,7 @@ import UIKit
 import PDFKit
 
 
+//variable data for book covers and pdf files
 
 var bookIMG = ["hp1", "hp2", "hp3"]
 var bookData = ["hpbook1", "hpbook2", "hpbook3"]
@@ -10,16 +11,20 @@ var pdfView : PDFView? = nil
 
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
+    //collection view for each selection
+    
     @IBOutlet weak var CV1: UICollectionView!
     @IBOutlet weak var CV2: UICollectionView!
     @IBOutlet weak var CV3: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookIMG.count
+        //number of books in collection
        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //3 cells: Each cell represents a different topic of book
         
         if collectionView == self.CV1{
         
@@ -46,6 +51,9 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //user clicks on cell to open pdf file in seperate view
+        
         switch indexPath.row{
         case 0 :
             
