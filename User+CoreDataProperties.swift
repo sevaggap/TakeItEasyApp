@@ -20,7 +20,7 @@ extension User {
     @NSManaged public var name: String?
     @NSManaged public var password: String?
     @NSManaged public var readData: String?
-    @NSManaged public var notes: [Array<UsersNotes>]?
+    @NSManaged public var notes: [UsersNotes]?
 
 }
 
