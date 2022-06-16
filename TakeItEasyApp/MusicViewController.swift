@@ -10,9 +10,10 @@ import AVFoundation
 
 class MusicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var circleImg: UIImageView!
     var playerItem:AVPlayerItem?
     var player:AVPlayer?
-    
+    var custColor = CGColor.init(red: 0, green: 0, blue: 0, alpha: 0.6)
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var animateImageView: UIImageView!
     
@@ -24,7 +25,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    var playBool = false
+    var playBool = true
     var uCell : MusicCollectionViewCell?
     var musicList = ["Deezer", "Sky", "Hawaii", "Enchante", "Sun is Shining"]
     var Audio : AVAudioPlayer?
@@ -40,7 +41,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         cell.musicImage.image = UIImage(imageLiteralResourceName: musicList[indexPath.row])
         
-        cell.musicImage.layer.shadowColor = UIColor.black.cgColor
+        cell.musicImage.layer.shadowColor = custColor
         cell.musicImage.layer.shadowOpacity = 1.0
         cell.musicImage.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
         cell.musicImage.layer.shadowRadius = 2.0
@@ -127,6 +128,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func playback(){
+        playPause.tintColor = UIColor.systemIndigo
         if (playBool == true)
         {
            playPause.image = UIImage(systemName: "play.fill")
@@ -140,6 +142,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
             player?.play()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(progressCheck), userInfo:nil, repeats: true)
         }
+        playPause.tintColor = UIColor.systemIndigo
         
     }
     
@@ -151,21 +154,10 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainMusicImage.isUserInteractionEnabled = true
-        playPause.isUserInteractionEnabled = true
-        mainMusicImage.image = UIImage(imageLiteralResourceName: "Deezer")
-        mainMusicImage.layer.shadowColor = UIColor.black.cgColor
-        mainMusicImage.layer.shadowOpacity = 1.0
-        mainMusicImage.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
-        mainMusicImage.layer.shadowRadius = 2.0
-        
-        mainMusicImage.layer.masksToBounds = false
-        mainMusicImage.layer.cornerRadius = 20
-        
-        mainMusicLabel.text! = "Deezer"
-        
+        uiConfig()
+       
         var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
-        playPause.image = UIImage(systemName: "pause.fill")
+       
         getData(url: mUrl, completion: { result in
             switch result{
             case .failure(let error):

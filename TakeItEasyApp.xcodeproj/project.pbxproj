@@ -45,6 +45,7 @@
 		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
 		E9FE9939285AF244000FD882 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE9938285AF244000FD882 /* MusicPlayer.swift */; };
 		E9FE993B285AF67C000FD882 /* DeezerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE993A285AF67C000FD882 /* DeezerAPI.swift */; };
+		E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */; };
 		F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704930285792600062DCB7 /* PdfScreenViewController.swift */; };
 		F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */; };
 		F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */; };
@@ -115,6 +116,7 @@
 		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
 		E9FE9938285AF244000FD882 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		E9FE993A285AF67C000FD882 /* DeezerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAPI.swift; sourceTree = "<group>"; };
+		E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigMusic.swift; sourceTree = "<group>"; };
 		F5704930285792600062DCB7 /* PdfScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfScreenViewController.swift; sourceTree = "<group>"; };
 		F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
 				E9FE993A285AF67C000FD882 /* DeezerAPI.swift */,
 				E9FE9938285AF244000FD882 /* MusicPlayer.swift */,
+				E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */,
+				E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */,
 				F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */,
