@@ -165,7 +165,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         mainMusicLabel.text! = "Deezer"
         
         var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
-        
+        playPause.image = UIImage(systemName: "pause.fill")
         getData(url: mUrl, completion: { result in
             switch result{
             case .failure(let error):
