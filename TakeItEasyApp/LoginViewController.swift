@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
                                     
                                        print("switch remember me is off")
                                    }
+                
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
                 tabBar.modalPresentationStyle = .fullScreen
@@ -57,6 +58,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          hideLabelErrormsg()
+        viewDidLoad_PopulateCredentialInKeyChain()
         // Do any additional setup after loading the view.
     }
     
@@ -76,7 +78,12 @@ class LoginViewController: UIViewController {
 //            }
 //        }
     
+   
     func buttonSignInDidTouchUpInside_RememberMe(username : String) {
+            //get keychain username from last time in UD
+            let userDefault = UserDefaults.standard
+            let lastUser = userDefault.string(forKey: "lastUser")
+
             //update keychain credential
             let request : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : loginId.text]
 
@@ -88,7 +95,26 @@ class LoginViewController: UIViewController {
             } else {
                 print("Error.")
             }
-           
+            //update keychain username to this time in UD
+            userDefault.set(username, forKey: "lastUser")
         }
-    
+    func viewDidLoad_PopulateCredentialInKeyChain() {
+            //populate username
+            let userDefault = UserDefaults.standard
+            loginId.text = userDefault.string(forKey: "lastUser")
+
+            //populate password
+            let request : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : loginId.text, kSecReturnAttributes as String : true, kSecReturnData as String : true]
+            var response : CFTypeRef?
+            if SecItemCopyMatching(request as CFDictionary, &response) == noErr {
+                let data = response as? [String : Any]
+                let username = data![ kSecAttrAccount as String] as? String
+                let passwordEncrypted = (data![ kSecValueData as String] as? Data)!
+                let passwordUnencrypted = String(data: passwordEncrypted, encoding: .utf8)
+                print(username!,passwordUnencrypted!)
+                loginPassword.text = passwordUnencrypted
+            } else {
+                print("Error.")
+            }
+        }
 }
