@@ -9,18 +9,27 @@ import UIKit
 import AVFoundation
 
 class MusicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
+    var playerItem:AVPlayerItem?
+    var player:AVPlayer?
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var animateImageView: UIImageView!
+    
     @IBOutlet weak var mainMusicLabel: UILabel!
     @IBOutlet weak var mainMusicImage: UIImageView!
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var playPause: UIImageView!
+    
+    
+    
     var playBool = false
     var uCell : MusicCollectionViewCell?
-    var musicList = ["City Lights", "Sky", "Hawaii", "Enchante", "Sun is Shining"]
+    var musicList = ["Deezer", "Sky", "Hawaii", "Enchante", "Sun is Shining"]
     var Audio : AVAudioPlayer?
     var timer : Timer?
-    
+    var mModel : MusicModel?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return musicList.count
@@ -44,18 +53,41 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.animateCell()
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+       
+        var cell2 = collectionView.cellForItem(at: indexPath) as! MusicCollectionViewCell
+        cell2.animationDelay = 0.5
+        cell2.animateCell()
+//        cell2.dest_y = mainMusicImage.center.y
+//        cell2.dest_x = mainMusicImage.center.x
+//        animateCellImg(cell_x: cell2.center.x, cell_y: collectionView.center.y, musLbl: cell2.musicLabel.text!)
+    }
     
+//    func animateCellImg(cell_x : Double, cell_y : Double, musLbl : String){
+//        animateImageView.image = UIImage(imageLiteralResourceName: musLbl)
+//        animateImageView.center.x = cell_x
+//        animateImageView.center.y = cell_y
+//
+//        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseIn, animations: {
+//            self.animateImageView.center.x = self.mainMusicImage.center.x
+//            self.animateImageView.center.y = self.mainMusicImage.center.y
+//        }, completion: nil)
+//
+//       // animateImageView.
+//
+//    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
         
-        Audio?.stop()
+        player?.pause()
         
-        Audio?.currentTime = 0
+        var t = CMTime.zero
+        player?.seek(to: t)
         
-        Audio?.stop()
+        player?.play()
         
         playBool = true
-        playback()
+        
         playPause.image = UIImage(systemName: "pause.fill")
         
         
@@ -72,7 +104,8 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
 //            }, completion: nil)
 //
 //        })
-        
+        cell.animationDelay = 2.0
+        cell.animateCell()
         
         UIView.animate(withDuration: 0.5, animations: {
             self.mainMusicImage.transform = CGAffineTransform(scaleX: -0.01, y: 1.0)
@@ -87,17 +120,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
-    func setMusic(song : URL) {
-        do{
-            try Audio = try AVAudioPlayer(contentsOf: song)
-           
-        }
-        catch{
-            print ("Audio Player Error")
-        }
-        
     
-    }
     
     @IBAction func playPauseAction(_ sender: Any) {
        playback()
@@ -108,30 +131,29 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         {
            playPause.image = UIImage(systemName: "play.fill")
             playBool = false
-            Audio?.stop()
+            player?.pause()
         }
         else if (playBool == false)
         {
             playPause.image = UIImage(systemName: "pause.fill")
             playBool = true
-            Audio?.play()
+            player?.play()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(progressCheck), userInfo:nil, repeats: true)
         }
         
     }
     
     @objc func progressCheck(){
-        progressBar.progress = Float(Audio!.currentTime/Audio!.duration)
+      //  progressBar.progress = Float(Audio!.currentTime/Audio!.duration)
         
     }
-
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainMusicImage.isUserInteractionEnabled = true
         playPause.isUserInteractionEnabled = true
-        
+        mainMusicImage.image = UIImage(imageLiteralResourceName: "Deezer")
         mainMusicImage.layer.shadowColor = UIColor.black.cgColor
         mainMusicImage.layer.shadowOpacity = 1.0
         mainMusicImage.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
@@ -140,15 +162,43 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         mainMusicImage.layer.masksToBounds = false
         mainMusicImage.layer.cornerRadius = 20
         
-        mainMusicLabel.text! = "City Lights"
+        mainMusicLabel.text! = "Deezer"
         
-        var filePath = Bundle.main.path(forResource: "Someday", ofType: "mp3")!
+        var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
         
-        setMusic(song: URL(fileURLWithPath: filePath))
+        getData(url: mUrl, completion: { result in
+            switch result{
+            case .failure(let error):
+                print("sw", error)
+            case .success(let res):
+                self.mModel = res
+                print()
+                let sURL = URL(string: self.mModel!.preview)
+                self.setMusicAV(musicUrl: sURL!)
+        }
+        
+        })
+        
+        var timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
+        
+        //let sUrl = URL(string: musicData!.preview)
+       
+        
+        //
+        
+        //setMusic(song: URL(fileURLWithPath: filePath))
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func checkUpdates(){
+        if (mModel != nil)
+        {
+            mainMusicLabel.text = mModel?.title
+        }
+            
+    }
+    
+     }
     /*
     // MARK: - Navigation
 
@@ -159,4 +209,4 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     */
 
-}
+
