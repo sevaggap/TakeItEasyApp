@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes-->
+        <!--Notes View Controller-->
         <scene sceneID="pX3-xm-231">
             <objects>
-                <viewController storyboardIdentifier="notesVC" id="p71-qU-rYH" customClass="NotesViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p71-qU-rYH" customClass="NotesViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="paU-J3-gf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJu-nW-fvh">
-                                <rect key="frame" x="20" y="69" width="94" height="49"/>
+                                <rect key="frame" x="20" y="113" width="94" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="TtQ-lv-bQB"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-Nh-35s">
-                                <rect key="frame" x="20" y="190" width="374" height="688"/>
+                                <rect key="frame" x="20" y="234" width="374" height="644"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="F4h-xh-ylQ" customClass="NotesTableViewCell" customModule="TakeItEasyApp" customModuleProvider="target">
@@ -76,7 +76,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZo-Xy-FaQ">
-                                <rect key="frame" x="254" y="85" width="140" height="31"/>
+                                <rect key="frame" x="254" y="129" width="140" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="uXL-Rh-UDx"/>
                                 </constraints>
@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="XHw-YS-TMF">
-                                <rect key="frame" x="20" y="125" width="374" height="44"/>
+                                <rect key="frame" x="20" y="169" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Kjo-AQ-V8n"/>
                                 </constraints>
@@ -115,16 +115,16 @@
                             <constraint firstItem="XHw-YS-TMF" firstAttribute="leading" secondItem="gJu-nW-fvh" secondAttribute="leading" id="ueX-NP-HGM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="TEQ-B0-hLv"/>
                     <navigationItem key="navigationItem" id="Lrh-4j-6Pg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="notesTable" destination="MR2-Nh-35s" id="5yf-2A-fyd"/>
+                        <outlet property="searchBar" destination="XHw-YS-TMF" id="PnV-EK-dKc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdA-VQ-DKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4476.811594202899" y="81.696428571428569"/>
+            <point key="canvasLocation" x="5404" y="82"/>
         </scene>
         <!--Update Notes View Controller-->
         <scene sceneID="g6S-4c-tQl">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qkv-Oe-G7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5842.0289855072469" y="81.696428571428569"/>
+            <point key="canvasLocation" x="6752.1739130434789" y="81.696428571428569"/>
         </scene>
         <!--Add Notes View Controller-->
         <scene sceneID="rNf-ii-usJ">
@@ -245,7 +245,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gG3-kl-wBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5168.115942028986" y="81.696428571428569"/>
+            <point key="canvasLocation" x="6078.2608695652179" y="81.696428571428569"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="kRZ-o6-aLw">
+            <objects>
+                <navigationController storyboardIdentifier="notesVC" automaticallyAdjustsScrollViewInsets="NO" id="T9S-6R-uQD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="h1K-3F-IFE"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J9f-EH-4Jv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p71-qU-rYH" kind="relationship" relationship="rootViewController" id="a1m-hJ-Kgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEY-vb-Cx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4667" y="82"/>
         </scene>
     </scenes>
     <resources>

@@ -27,7 +27,9 @@ class SignupViewController: UIViewController {
         if inputValidation(name: userName.text!, email: userEmail.text!, password1: userPassword.text!, password2: re_enterPassword.text!, mobileNo: userMobile.text!){
             if regexValidation(name: userName.text!, email: userEmail.text!, password: userPassword.text!){
                if credentialValidation(email: userEmail.text!){
+                   
                    //getOTP(<#T##sender: Any##Any#>)
+                   //call saveLastUser function
                    print("validated")
                    print("hello")
                    hideLabelErrormsg()
@@ -64,5 +66,8 @@ class SignupViewController: UIViewController {
         labelErrormsg.text = ""
         labelErrormsg.textColor = view.backgroundColor
     }
-    
+    func saveLastUser(){
+        let userDefault = UserDefaults.standard
+        userDefault.set(userName, forKey: "lastUser")
+    }
 }

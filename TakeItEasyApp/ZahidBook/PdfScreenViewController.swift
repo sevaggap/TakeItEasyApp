@@ -7,6 +7,8 @@ class PdfScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //create seperate pop-out view for pdfs
 
         let pdfView = PDFView(frame: view.bounds)
        
