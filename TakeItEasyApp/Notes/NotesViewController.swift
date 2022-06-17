@@ -37,10 +37,17 @@ class NotesViewController: UIViewController {
         NotesViewController.notes = NotesHelper.notes.getNotes()
         NotesViewController.tableObj = notesTable
         notesTable.reloadData()
-        navBar.title = "Sevag"
+        CurrentUser.user.updateCurrentUserName()
+        navBar.title = CurrentUser.user.name
 
     }
-
+    @IBAction func signOut(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginNC")
+        loginScreen.modalPresentationStyle = .fullScreen
+        self.present(loginScreen, animated: true, completion: nil)
+    }
+    
     // when the new note button is pressed, a screen will open where the user can enter new notes
     @IBAction func newNotePressed(_ sender: Any) {
         

@@ -86,7 +86,20 @@ class SignupViewController: UIViewController {
                 
         if( userOTP == OTP!){
             DBHelper.dbHelper.addData(nameValue: userName.text!, passValue: userPassword.text!, emailValue: userEmail.text!)
-            labelErrormsg.text = "User successfully created. Please login on the previous page!"
+            let userCreatedAlert = UIAlertController(title: "User Successfully Created!", message: "Please login!", preferredStyle: .alert)
+            
+            let confirm = UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+                
+                let storyboard = UIStoryboard(name: "Bristy", bundle: nil)
+                let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                loginScreen.modalPresentationStyle = .fullScreen
+                self.present(loginScreen, animated: true, completion: nil)
+                
+            })
+            
+            userCreatedAlert.addAction(confirm)
+            present(userCreatedAlert, animated: true)
+            
         } else {
             let wrongOTPAlert = UIAlertController(title: "Incorrect OTP", message: "The OTP you entered was inccorect! Please try again.", preferredStyle: .alert)
             
