@@ -12,18 +12,15 @@ extension MusicViewController{
     func uiConfig(){
         
         mainMusicImage.isUserInteractionEnabled = true
+        forward.isUserInteractionEnabled = true
+        backward.isUserInteractionEnabled = true
+        
         playPause.isUserInteractionEnabled = true
         mainMusicImage.image = UIImage(imageLiteralResourceName: "Deezer")
         
-        
-        mainMusicImage.layer.shadowColor = custColor
-        mainMusicImage.layer.shadowOpacity = 1.0
-        mainMusicImage.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
-        mainMusicImage.layer.shadowRadius = 2.0
-        
-        mainMusicImage.layer.masksToBounds = false
-        mainMusicImage.layer.cornerRadius = 20
-        
+        var sView = UIView()
+        setBorder(subView: sView, size: mainMusicImage.frame.size)
+        mainMusicImage.addSubview(sView)
         mainMusicLabel.text! = "Deezer"
         
         playPause.image = UIImage(systemName: "pause.fill")
@@ -33,5 +30,15 @@ extension MusicViewController{
         circleImg.layer.shadowOpacity = 1.0
         circleImg.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
         circleImg.layer.shadowRadius = 2.0
+        
+        circleImage2.layer.shadowColor = custColor
+        circleImage2.layer.shadowOpacity = 1.0
+        circleImage2.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        circleImage2.layer.shadowRadius = 2.0
+        
+        circleImage3.layer.shadowColor = custColor
+        circleImage3.layer.shadowOpacity = 1.0
+        circleImage3.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        circleImage3.layer.shadowRadius = 2.0
     }
 }
