@@ -77,8 +77,6 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
     }
         
-        
-        
 }
     
     
@@ -286,6 +284,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             
         }
     
+    //Gives transparent nav bar
     func viewDidLoad_TransparentNavBar() {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
