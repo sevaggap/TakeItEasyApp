@@ -32,6 +32,40 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     var timer : Timer?
     var mModel : MusicModel?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        uiConfig()
+       
+        var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
+       
+        getData(url: mUrl, completion: { result in
+            switch result{
+            case .failure(let error):
+                print("sw", error)
+            case .success(let res):
+                self.mModel = res
+                print()
+                let sURL = URL(string: self.mModel!.preview)
+                self.setMusicAV(musicUrl: sURL!)
+                
+        }
+        
+        })
+        playBool = false
+        playback()
+        
+        var timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
+        
+        //let sUrl = URL(string: musicData!.preview)
+       
+        
+        //
+        
+        //setMusic(song: URL(fileURLWithPath: filePath))
+        // Do any additional setup after loading the view.
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return musicList.count
     }
@@ -147,40 +181,17 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     @objc func progressCheck(){
-      //  progressBar.progress = Float(Audio!.currentTime/Audio!.duration)
+        
+        var currTime = player?.currentTime().seconds
+        var duration = player?.currentItem?.duration.seconds
+        
+        print (currTime!)
+        print (duration!)
+        progressBar.progress = Float(currTime!/duration!)
         
     }
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        uiConfig()
-       
-        var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
-       
-        getData(url: mUrl, completion: { result in
-            switch result{
-            case .failure(let error):
-                print("sw", error)
-            case .success(let res):
-                self.mModel = res
-                print()
-                let sURL = URL(string: self.mModel!.preview)
-                self.setMusicAV(musicUrl: sURL!)
-        }
-        
-        })
-        
-        var timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
-        
-        //let sUrl = URL(string: musicData!.preview)
-       
-        
-        //
-        
-        //setMusic(song: URL(fileURLWithPath: filePath))
-        // Do any additional setup after loading the view.
-    }
+    
     
     @objc func checkUpdates(){
         if (mModel != nil)
