@@ -14,21 +14,20 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
         
+    @IBOutlet weak var navBar: UINavigationItem!
+    
     static var tableObj :  UITableView!
     
     static var notes = [UsersNotes]()
-    var notesTitles = [String]()
-    var searchedNotes = [String]()
+    var searchedNotes : [UsersNotes] = []
     var searching  = false
          
     // when the view will appear, the notes are retrived from core data
     override func viewWillAppear(_ animated: Bool) {
-        notesTitles.removeAll()
+        searchedNotes.removeAll()
         NotesViewController.notes = NotesHelper.notes.getNotes()
-        for note in NotesViewController.notes {
-            notesTitles.append(note.title!)
-        }
-        print(notesTitles)
+        searchedNotes = NotesViewController.notes
+        print(searchedNotes)
         notesTable.reloadData()
     }
     
@@ -37,10 +36,8 @@ class NotesViewController: UIViewController {
         super.viewDidLoad()
         NotesViewController.notes = NotesHelper.notes.getNotes()
         NotesViewController.tableObj = notesTable
-        for note in NotesViewController.notes {
-            notesTitles.append(note.title!)
-        }
         notesTable.reloadData()
+        navBar.title = "Sevag"
 
     }
 
@@ -91,18 +88,21 @@ class NotesViewController: UIViewController {
 // this function searchs through the note titles based on what the user types in the serach bar
 extension NotesViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchedNotes.removeAll()
+        print("in search")
         if searchText == "" {
             searching = false
-            print(searching)
             NotesViewController.notes = NotesHelper.notes.getNotes()
             notesTable.reloadData()
             } else {
-                searchedNotes = notesTitles.filter({$0.prefix(searchText.count) == searchText})
-                print(searchedNotes)
+                for Note in NotesViewController.notes{
+                    if Note.title!.lowercased().contains(searchText.lowercased()) {
+                        searchedNotes.append(Note)
+                    }
                 searching = true
-                notesTable.reloadData()
-                print(searching)
-
+            }
+            print(searchedNotes)
+            notesTable.reloadData()
         }
         
     }
@@ -130,15 +130,26 @@ extension NotesViewController : UITableViewDataSource {
             cell.noteTitle.text =  NotesViewController.notes[indexPath.row].title
             cell.noteDate.text = dateFormat(date: NotesViewController.notes[indexPath.row].date!)
         } else if searching {
-            cell.noteTitle.text = searchedNotes[indexPath.row]
+            if searchedNotes[indexPath.row].isFavourite {
+                cell.noteFavouriteImage.image = UIImage(systemName: "heart.fill")
+            } else {
+            cell.noteTitle.text = searchedNotes[indexPath.row].title
             cell.noteFavouriteImage.image =  nil
-            cell.noteDate.text = ""
+            cell.noteDate.text = dateFormat(date: searchedNotes[indexPath.row].date!)
+                print("in else searching")
+            }
         } else {
             cell.noteTitle.text =  NotesViewController.notes[indexPath.row].title
             cell.noteDate.text = dateFormat(date: NotesViewController.notes[indexPath.row].date!)
             cell.noteFavouriteImage.image = nil
         }
         
+        cell.backgroundColor = UIColor(named: "takeItEasyPurple")
+        cell.layer.cornerRadius = 20
+        cell.layer.shadowRadius = 5
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowOffset  = CGSize(width: 3, height: 3)
+        cell.layer.shadowColor = CGColor(red: 200, green: 200, blue: 200, alpha: 1.0)
         return cell
     }
     
@@ -157,16 +168,17 @@ extension NotesViewController : UITableViewDelegate{
         print(searching)
         
         if searching {
-            updateNoteScreen.titleData =  searchedNotes[indexPath.row]
+            updateNoteScreen.titleData = searchedNotes[indexPath.row].title
+            updateNoteScreen.bodyData = searchedNotes[indexPath.row].body
+            updateNoteScreen.noteId = searchedNotes[indexPath.row].noteId
+            print("note id",searchedNotes[indexPath.row].noteId)
         } else {
-            print("in else")
             updateNoteScreen.titleData = NotesViewController.notes[indexPath.row].title
             updateNoteScreen.bodyData = NotesViewController.notes[indexPath.row].body
             updateNoteScreen.noteId = NotesViewController.notes[indexPath.row].noteId
             print("note id id",NotesViewController.notes[indexPath.row].noteId)
         }
     
-        print("in did select")
         navigationController?.pushViewController(updateNoteScreen, animated: true)
     }
     
@@ -178,7 +190,12 @@ extension NotesViewController : UITableViewDelegate{
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { _ , IndexPath in
             
-            NotesHelper.notes.deleteNote(noteId: NotesViewController.notes[indexPath.row].noteId)
+            if self.searching {
+                NotesHelper.notes.deleteNote(noteId: self.searchedNotes[indexPath.row].noteId)
+            } else {
+                NotesHelper.notes.deleteNote(noteId: NotesViewController.notes[indexPath.row].noteId)
+            }
+            
             NotesViewController.notes = NotesHelper.notes.getNotes()
             self.notesTable.reloadData()
 
@@ -189,7 +206,12 @@ extension NotesViewController : UITableViewDelegate{
         
         let favouriteAction = UITableViewRowAction(style: .normal, title: favouriteActionTitle, handler: {_,_ in
             
-            NotesHelper.notes.favouriteNote(noteId: NotesViewController.notes[indexPath.row].noteId)
+            if self.searching {
+                NotesHelper.notes.favouriteNote(noteId: self.searchedNotes[indexPath.row].noteId)
+            } else {
+                NotesHelper.notes.favouriteNote(noteId: NotesViewController.notes[indexPath.row].noteId)
+            }
+            
             NotesViewController.notes = NotesHelper.notes.getNotes()
             self.notesTable.reloadData()
             
