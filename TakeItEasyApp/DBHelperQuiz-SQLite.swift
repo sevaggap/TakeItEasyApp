@@ -11,11 +11,11 @@ import SQLite3
 //SQLite3 DBHelper for quiz master & transaction data
 
 
-class DBHelperQuiz {
+class DBHelperQuizArc {
     
     
     //Part 1 - Declare cross class vars
-    static var dbHelper = DBHelperQuiz() //static instance for DBHelperQuiz
+    static var dbHelper = DBHelperQuizArc() //static instance for DBHelperQuiz
     var dbPointer : OpaquePointer? //declare an opaque pointer (A wrapper around an opaque C pointer.)
     
     
