@@ -18,48 +18,86 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var re_enterPassword: UITextField!
     
-    
     @IBOutlet weak var userMobile: UITextField!
     
+    @IBOutlet weak var enteredOTP: UITextField!
+    
     @IBOutlet weak var labelErrormsg: UILabel!
+    
+    var OTP : Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideLabelErrormsg()
+    }
     
     @IBAction func getOTP(_ sender: Any) {
         if inputValidation(name: userName.text!, email: userEmail.text!, password1: userPassword.text!, password2: re_enterPassword.text!, mobileNo: userMobile.text!){
             if regexValidation(name: userName.text!, email: userEmail.text!, password: userPassword.text!){
                if credentialValidation(email: userEmail.text!){
                    
-                   //getOTP(<#T##sender: Any##Any#>)
+                   OTP = Int.random(in: 100000...999999)
+            
+                   let OTPMessage = UIAlertController(title: "Alert", message: "Your OTP is \(OTP!)", preferredStyle: .alert)
+                   
+                   let alert = UIAlertController(title: "Your OTP is: \(OTP!)", message: "Please enter your OTP below", preferredStyle: .alert)
+                   
+                   let confirm = UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+                       guard let fields = alert.textFields, fields.count == 1 else {
+                           return
+                       }
+                       let OTPField = fields[0]
+                       guard let inputedOTP = OTPField.text, !inputedOTP.isEmpty else {
+                           return
+                       }
+                       self.confirmOTP(userOTP: Int(inputedOTP)!)
+                       
+                   })
+
+                   let cancel =  UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                   
+                   alert.addTextField { field in
+                       field.placeholder = "OTP"
+                   }
+                   alert.addAction(confirm)
+                   alert.addAction(cancel)
+                   
+                   present(alert, animated: true)
+                   
                    //call saveLastUser function
                    print("validated")
                    print("hello")
                    hideLabelErrormsg()
                }
                 else {
-                    labelErrormsg.text = errorMsgSignUp
-                    labelErrormsg.textColor = UIColor.red
+                  alert(message: errorMsgSignUp)
                 }
             }
             else {
-                labelErrormsg.text = errorMsgSignUp
-                labelErrormsg.textColor = UIColor.red
+                alert(message: errorMsgSignUp)
             }
-        
         }
         else {
+            alert(message: errorMsgSignUp)
+        }
+    }
+    
+    func confirmOTP(userOTP : Int) {
+                
+        if( userOTP == OTP!){
+            DBHelper.dbHelper.addData(nameValue: userName.text!, passValue: userPassword.text!, emailValue: userEmail.text!)
+            labelErrormsg.text = "User successfully created. Please login on the previous page!"
+        } else {
+            let wrongOTPAlert = UIAlertController(title: "Incorrect OTP", message: "The OTP you entered was inccorect! Please try again.", preferredStyle: .alert)
             
-            labelErrormsg.text = errorMsgSignUp
-            labelErrormsg.textColor = UIColor.red
-        }
-        }
+            let confirm = UIAlertAction(title: "Confirm", style: .default, handler: nil)
+            
+            wrongOTPAlert.addAction(confirm)
+            
+            present(wrongOTPAlert, animated: true)
 
-   // @IBAction func signIn(_ sender: Any) {
-        //signup validation
+        }
       
-   // }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hideLabelErrormsg()
-        // Do any additional setup after loading the view.
     }
 
     func hideLabelErrormsg(){

@@ -40,13 +40,13 @@ class LoginViewController: UIViewController {
                 
             }
             else {
-                errormsgLabel.text = errorMsgSignIn
-                errormsgLabel.textColor = .red
+//                errormsgLabel.text = errorMsgSignIn
+//                errormsgLabel.textColor = .red
+                alert(message: errorMsgSignIn)
             }
         }
         else {
-            errormsgLabel.text = errorMsgSignIn
-            errormsgLabel.textColor = .red
+            alert(message: errorMsgSignIn)
         }
         
     }
@@ -66,17 +66,6 @@ class LoginViewController: UIViewController {
         errormsgLabel.text = ""
         errormsgLabel.textColor = view.backgroundColor
     }
-//    func switchStatus(){
-//            let switchStatus = userDefaults.bool(forKey: "switch")
-//            let keyUsername = userDefaults.value(forKey: "username") as? String
-//            if(switchStatus){
-//                switchState.setOn(true, animated: false)
-//                loginId.text = keyUsername
-//                viewKey()
-//            } else {
-//                switchState.setOn(false, animated: false)
-//            }
-//        }
     
    
     func buttonSignInDidTouchUpInside_RememberMe(username : String) {

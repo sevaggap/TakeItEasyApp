@@ -17,6 +17,7 @@
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
+		94236737285C258A002BEEAE /* LoginAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94236736285C258A002BEEAE /* LoginAlerts.swift */; };
 		9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9423701B2858D733006BE3DF /* SearchViewController.swift */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
@@ -93,6 +94,7 @@
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		94236736285C258A002BEEAE /* LoginAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlerts.swift; sourceTree = "<group>"; };
 		9423701B2858D733006BE3DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -183,11 +185,12 @@
 			isa = PBXGroup;
 			children = (
 				942FE8FD28579D2200CEBEF2 /* Notes.storyboard */,
+				9447B9AD28514170009F9205 /* NotesViewController.swift */,
 				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
 				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
 				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
-				9447B9AD28514170009F9205 /* NotesViewController.swift */,
 				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
+				94236736285C258A002BEEAE /* LoginAlerts.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */,
 				25039100285C04F800C39755 /* CurrentUser.swift in Sources */,
+				94236737285C258A002BEEAE /* LoginAlerts.swift in Sources */,
 				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
 				251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */,
 				F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */,

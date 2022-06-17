@@ -147,7 +147,7 @@ class NotesHelper {
 //        
 //    }
     
-    // delete one note via the noteId
+    // delete one note via noteId
     func deleteNote(noteId: Int64){
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UsersNotes")
