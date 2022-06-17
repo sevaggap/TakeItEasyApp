@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
+		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
+		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
