@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250390FE285C037400C39755 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250390FD285C037400C39755 /* QuizViewController.swift */; };
+		25039100285C04F800C39755 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250390FF285C04F800C39755 /* CurrentUser.swift */; };
+		25039102285C09ED00C39755 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25039101285C09ED00C39755 /* TabBarController.swift */; };
+		25039107285C0E9A00C39755 /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25039106285C0E9A00C39755 /* QuizCollectionViewCell.swift */; };
+		25039109285C4D6F00C39755 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25039108285C4D6F00C39755 /* QuizTableViewCell.swift */; };
 		251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */; };
 		251BB33D2858B4E600A44D4C /* Class-Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BB33C2858B4E600A44D4C /* Class-Quiz.swift */; };
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
@@ -78,6 +83,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250390FD285C037400C39755 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		250390FF285C04F800C39755 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		25039101285C09ED00C39755 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		25039106285C0E9A00C39755 /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
+		25039108285C4D6F00C39755 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBHelperQuiz-SQLite.swift"; sourceTree = "<group>"; };
 		251BB33C2858B4E600A44D4C /* Class-Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class-Quiz.swift"; sourceTree = "<group>"; };
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
@@ -262,6 +272,11 @@
 			isa = PBXGroup;
 			children = (
 				257D5CDB2857D90300505D25 /* Xavier.storyboard */,
+				25039108285C4D6F00C39755 /* QuizTableViewCell.swift */,
+				250390FD285C037400C39755 /* QuizViewController.swift */,
+				25039106285C0E9A00C39755 /* QuizCollectionViewCell.swift */,
+				250390FF285C04F800C39755 /* CurrentUser.swift */,
+				25039101285C09ED00C39755 /* TabBarController.swift */,
 				251BB3382858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift */,
 				251BB33C2858B4E600A44D4C /* Class-Quiz.swift */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
@@ -445,15 +460,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
+				250390FE285C037400C39755 /* QuizViewController.swift in Sources */,
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */,
+				25039100285C04F800C39755 /* CurrentUser.swift in Sources */,
 				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
 				251BB3392858B4AC00A44D4C /* DBHelperQuiz-SQLite.swift in Sources */,
 				F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
 				251BB33D2858B4E600A44D4C /* Class-Quiz.swift in Sources */,
+				25039109285C4D6F00C39755 /* QuizTableViewCell.swift in Sources */,
 				9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */,
 				9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */,
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
@@ -463,6 +481,7 @@
 				F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */,
 				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
+				25039102285C09ED00C39755 /* TabBarController.swift in Sources */,
 				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */,
 				E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */,
@@ -476,6 +495,7 @@
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
 				F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */,
+				25039107285C0E9A00C39755 /* QuizCollectionViewCell.swift in Sources */,
 				CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
