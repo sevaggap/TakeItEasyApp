@@ -47,6 +47,10 @@
 		CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511D28579F6600A51227 /* LoginValidation.swift */; };
 		CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511F28579F7200A51227 /* SignupValidation.swift */; };
 		E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */; };
+		E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */; };
+		E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF78285D16C6003259CA /* Sky.mp3 */; };
+		E9BBEF7B285D1744003259CA /* Enchante.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF7A285D1744003259CA /* Enchante.mp3 */; };
+		E9BBEF7D285D17D7003259CA /* Hawaii.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */; };
 		E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EB81DD28539B9600BCBC40 /* Friday.png */; };
 		E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6228228524256004FD5C6 /* MusicViewController.swift */; };
 		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
@@ -128,6 +132,10 @@
 		CE3C511D28579F6600A51227 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		CE3C511F28579F7200A51227 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		E96BDE5E2857B12500A304A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/JamesMusic.storyboard; sourceTree = "<group>"; };
+		E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sun Is Shining.mp3"; sourceTree = "<group>"; };
+		E9BBEF78285D16C6003259CA /* Sky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sky.mp3; sourceTree = "<group>"; };
+		E9BBEF7A285D1744003259CA /* Enchante.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Enchante.mp3; sourceTree = "<group>"; };
+		E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hawaii.mp3; sourceTree = "<group>"; };
 		E9EB81DD28539B9600BCBC40 /* Friday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friday.png; sourceTree = "<group>"; };
 		E9F6228228524256004FD5C6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -292,7 +300,11 @@
 			isa = PBXGroup;
 			children = (
 				E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */,
+				E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */,
 				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
+				E9BBEF78285D16C6003259CA /* Sky.mp3 */,
+				E9BBEF7A285D1744003259CA /* Enchante.mp3 */,
+				E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */,
 				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
 				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
 				E9FE993A285AF67C000FD882 /* DeezerAPI.swift */,
@@ -425,11 +437,15 @@
 			files = (
 				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
 				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
+				E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
 				9413CF942857E8D2007E7989 /* Search.storyboard in Resources */,
+				E9BBEF7B285D1744003259CA /* Enchante.mp3 in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
 				257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */,
+				E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */,
+				E9BBEF7D285D17D7003259CA /* Hawaii.mp3 in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
