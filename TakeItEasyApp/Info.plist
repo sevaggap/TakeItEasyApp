@@ -21,10 +21,9 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string></string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string></string>
 </dict>
 </plist>
