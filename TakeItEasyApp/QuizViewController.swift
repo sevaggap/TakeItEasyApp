@@ -15,7 +15,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var labelCurrentQuestionDesc: UILabel!
     
     @IBAction func buttonSubmitAnswersDidTouchUpInside(_ sender: Any) {
-        if currentQuestionID + 1 == QuizArrFiltered[QuizIDFromCollView].questions.count {
+        if currentQuestionID + 1 == QuizArrFiltered[QuizIDFromCollView - 1].questions.count {
             //update numberOfCorrect
             if selectedAnswer.1 {
                 numberOfCorrect += 1
@@ -54,7 +54,7 @@ class QuizViewController: UIViewController {
             
         } else {
             //update button label
-            if currentQuestionID == QuizArrFiltered[QuizIDFromCollView].questions.count - 2 {
+            if currentQuestionID == QuizArrFiltered[QuizIDFromCollView - 1].questions.count - 2 {
                 self.buttonSubmit.setTitle("Submit", for: .normal)
             }
             
@@ -67,7 +67,7 @@ class QuizViewController: UIViewController {
             currentQuestionID += 1
             labelCurrentQuestionDesc.alpha = 1
             pickerViewQuiz.alpha = 1
-            labelCurrentQuestionDesc.text = "Question \(currentQuestionID + 1): " +  QuizArrFiltered[QuizIDFromCollView].questions[currentQuestionID].questionDesc
+            labelCurrentQuestionDesc.text = "Question \(currentQuestionID + 1): " +  QuizArrFiltered[QuizIDFromCollView - 1].questions[currentQuestionID].questionDesc
             pickerViewQuiz.reloadAllComponents()
         }
     }
@@ -100,6 +100,7 @@ class QuizViewController: UIViewController {
         viewDidLoad_PrepareQuizArrAll()
         viewDidLoad_PrepareQuizArrFiltered()
         DBHelperQuiz.dbHelperQuiz.prepareDatabase()
+        DBHelperQuiz.dbHelperQuiz.createTable()
         print("DB prepared")
         print("viewDidLoad")
     }
@@ -183,9 +184,9 @@ extension QuizViewController {
     }
     func viewDidLoad_PopulateCurrentUserName() {
         // TODO: - Uncomment the following two lines to populate user name in the nav bar
-//        CurrentUser.user.updateCurrentUserName()
-//        navItemUserName.title = CurrentUser.user.name
-        navItemUserName.title = "Test User"
+        CurrentUser.user.updateCurrentUserName()
+        navItemUserName.title = CurrentUser.user.name
+        //navItemUserName.title = "Test User"
     }
 }
 
@@ -215,7 +216,8 @@ extension QuizViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let quizcellcoll = collectionView.dequeueReusableCell(withReuseIdentifier: "quizcellcoll", for: indexPath) as! QuizCollectionViewCell
         
-        if DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: NSNumber(value: indexPath.section + 1), userEmail: currentUserEmail() as NSString) {
+        print("QuizID = \(indexPath.section + 1)")
+        if DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: NSNumber(value: indexPath.section + 2), userEmail: currentUserEmail() as NSString) {
             quizcellcoll.imageViewCompleted.image = UIImage(systemName: "checkmark.circle.fill")
             quizcellcoll.imageViewCompleted.tintColor = .green
         } else {
@@ -236,6 +238,7 @@ extension QuizViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         labelReminderWhenIsCompletedIsNil.text = ""
+        print("QuizID = \(indexPath.row + 1)")
         let quizIsCompleted : Bool = DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: NSNumber(value: indexPath.row + 1), userEmail: currentUserEmail() as NSString)
         
         if quizIsCompleted {
@@ -265,8 +268,8 @@ extension QuizViewController : UICollectionViewDataSource, UICollectionViewDeleg
 //UIView - Results
 extension QuizViewController {
     func didSelectItemAtCollView_UpdateResultLabels() {
-        print(DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: (QuizIDFromCollView + 1) as! NSNumber, userEmail: currentUserEmail() as! NSString) as Bool)
-        let quizResult : QuizResult = DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: (QuizIDFromCollView + 1) as! NSNumber, userEmail: currentUserEmail() as! NSString)
+        print(DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: (QuizIDFromCollView + 1) as NSNumber, userEmail: currentUserEmail() as NSString) as Bool)
+        let quizResult : QuizResult = DBHelperQuiz.dbHelperQuiz.retrieveQuizResult(quizID: (QuizIDFromCollView + 1) as NSNumber, userEmail: currentUserEmail() as NSString)
         var CompletedAt = quizResult.completedAt
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "EST")
@@ -420,6 +423,7 @@ class DBHelperQuiz {
     //create/prepare database
     func prepareDatabase() {
         let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("QuizResult.sqlite")
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!)
         
         if sqlite3_open(filePath.path, &dbpointer) != SQLITE_OK {
             print("Error at prepareDatabase()")
@@ -441,7 +445,7 @@ class DBHelperQuiz {
     //CRUD - Create (insert)
     func createQuizResult(quizID : NSNumber, isCompleted : NSNumber, numberOfCorrect : NSNumber, userEmail : NSString, completedAt : NSString) {
         var statement : OpaquePointer?
-        QuizSQL = "INSERT INTO QUIZ_RESULT (quizID, isCompleted, numberOfCorrect, userEmail, completedAt) VALUES (?,?,?,?,?)"
+        QuizSQL = "INSERT INTO QUIZ_RESULT (quizID, isCompleted, numberOfCorrect, userEmail, completedAt) VALUES (\(quizID),\(isCompleted),\(numberOfCorrect),'\(userEmail)','\(completedAt)'"
         
         if sqlite3_prepare(dbpointer, QuizSQL, -1, &statement, nil) != SQLITE_OK {
             let error = String(cString: sqlite3_errmsg(dbpointer)!)
@@ -479,8 +483,8 @@ class DBHelperQuiz {
     //CRUD - Retrieve
     func retrieveQuizResult(quizID : NSNumber, userEmail : NSString) -> QuizResult {
         
-        //QuizSQL = "SELECT * FROM QUIZ_RESULT WHERE (quizID = \(quizID) AND userEmail = \(userEmail))"
-        QuizSQL = "SELECT * FROM QUIZ_RESULT"
+        QuizSQL = "SELECT * FROM QUIZ_RESULT WHERE (quizID = \(quizID) AND userEmail = '\(userEmail)')"
+        //QuizSQL = "SELECT * FROM QUIZ_RESULT"
         
         var statement : OpaquePointer?
         var quizResult : QuizResult?
@@ -501,15 +505,16 @@ class DBHelperQuiz {
             }
         } else {
             print("Error in query.")
-            quizResult = QuizResult(quizID: 1, isCompleted: true, numbOfCorrect: 1, userEmail: "test@gmail.com", completedAt: "20220617140811")
+            // TODO: -
+            //quizResult = QuizResult(quizID: 1, isCompleted: true, numbOfCorrect: 1, userEmail: "Error_test@gmail.com", completedAt: "20220617140811")
         }
         return quizResult!
     }
     
     func retrieveQuizResult(quizID : NSNumber, userEmail : NSString) -> Bool {
         var isCompleted = false
-        //QuizSQL = "SELECT * FROM QUIZ_RESULT WHERE (quizID = \(quizID) AND userEmail = \(userEmail))"
-        QuizSQL = "SELECT * FROM QUIZ_RESULT"
+        QuizSQL = "SELECT * FROM QUIZ_RESULT WHERE (quizID = \(quizID) AND userEmail = '\(userEmail)')"
+        //QuizSQL = "SELECT * FROM QUIZ_RESULT"
         var statement : OpaquePointer?
         //var quizResult : QuizResult?
         
