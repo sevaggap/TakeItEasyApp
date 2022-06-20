@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
-		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
@@ -43,14 +42,14 @@
 		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
 		E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D228530FEF004FD5C6 /* Someday.mp3 */; };
 		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
+		F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF350285EC3A700FDF4D9 /* recipe.pdf */; };
+		F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF352285EC8F300FDF4D9 /* technical.pdf */; };
+		F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF353285EC8F300FDF4D9 /* general.pdf */; };
 		F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704930285792600062DCB7 /* PdfScreenViewController.swift */; };
 		F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */; };
 		F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */; };
 		F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */; };
 		F570493B285793540062DCB7 /* Zahid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F570493A285793540062DCB7 /* Zahid.storyboard */; };
-		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
-		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
-		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
 		F57049872858DDA40062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049862858DDA40062DCB7 /* BooksViewController.swift */; };
 		F57049892858DDCB0062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049882858DDCB0062DCB7 /* BooksViewController.swift */; };
 		F57049EC285A77B40062DCB7 /* FetchBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049EB285A77B40062DCB7 /* FetchBooks.swift */; };
@@ -77,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
-		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -116,14 +114,14 @@
 		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9F622D228530FEF004FD5C6 /* Someday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Someday.mp3; sourceTree = "<group>"; };
 		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
+		F53FF350285EC3A700FDF4D9 /* recipe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = recipe.pdf; sourceTree = "<group>"; };
+		F53FF352285EC8F300FDF4D9 /* technical.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = technical.pdf; sourceTree = "<group>"; };
+		F53FF353285EC8F300FDF4D9 /* general.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = general.pdf; sourceTree = "<group>"; };
 		F5704930285792600062DCB7 /* PdfScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfScreenViewController.swift; sourceTree = "<group>"; };
 		F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F570493A285793540062DCB7 /* Zahid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Zahid.storyboard; sourceTree = "<group>"; };
-		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
-		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
-		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
 		F57049862858DDA40062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049882858DDCB0062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049EB285A77B40062DCB7 /* FetchBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooks.swift; sourceTree = "<group>"; };
@@ -277,13 +275,13 @@
 		F570492F2857920D0062DCB7 /* ZahidBook */ = {
 			isa = PBXGroup;
 			children = (
+				F53FF350285EC3A700FDF4D9 /* recipe.pdf */,
+				F53FF353285EC8F300FDF4D9 /* general.pdf */,
+				F53FF352285EC8F300FDF4D9 /* technical.pdf */,
 				F57049862858DDA40062DCB7 /* BooksViewController.swift */,
 				F57049882858DDCB0062DCB7 /* BooksViewController.swift */,
 				F57049ED285B89C90062DCB7 /* BookModelStruct.swift */,
 				F570493A285793540062DCB7 /* Zahid.storyboard */,
-				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
-				F570493C285795690062DCB7 /* hpbook2.pdf */,
-				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
 				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
 				F57049EF285BC2570062DCB7 /* WebUIKit.swift */,
 				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
@@ -398,9 +396,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
-				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
+				F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */,
+				F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */,
+				F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
 				9413CF942857E8D2007E7989 /* Search.storyboard in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
@@ -412,7 +411,6 @@
 				E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */,
 				CE3C511928579DC100A51227 /* Bristy.storyboard in Resources */,
 				E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */,
-				F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

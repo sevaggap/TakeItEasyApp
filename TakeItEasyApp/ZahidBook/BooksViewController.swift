@@ -4,11 +4,9 @@ import WebKit
 
 
 
-//var bookIMG = ["hp1", "hp2", "hp3"]
-var bookData = ["hpbook1", "hpbook2", "hpbook3"]
-var genBookIMG = ["gb1", "gb2", "gb3", "gb4"]
-var techBookIMG = ["tb1", "tb2", "tb3", "tb4"]
-var recBookIMG = ["rb1", "rb2", "rb3", "rb4"]
+var genBookIMG = ["gb1", "gb2", "gb3", "gb4", "gb5"]
+var techBookIMG = ["tb1", "tb2", "tb3", "tb4", "tb5"]
+var recBookIMG = ["rb1", "rb2", "rb3", "rb4", "rb5"]
 var pdfView : PDFView? = nil
 
 
@@ -18,14 +16,23 @@ var techBookLink : [String]?
 var recBookLink : [String]?
 
 
+var localBooks = ["general", "technical", "recipe"]
+
+
+
+var searching = false
+
+
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var CV1: UICollectionView!
     @IBOutlet weak var CV2: UICollectionView!
     @IBOutlet weak var CV3: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return genBookIMG.count
+        return recBookIMG.count
        
     }
     
@@ -112,6 +119,20 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             
             self.present(webKitVC, animated: true, completion: nil)
             
+        case 3:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+         
+            webKitVC.bookLink = genBookLink![indexPath.row]
+            
+            self.present(webKitVC, animated: true, completion: nil)
+            
+        case 4:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
+            pdfScreenVC.pdfName = localBooks[0]
+            self.present(pdfScreenVC, animated: true, completion: nil)
+            
             
             
         default:
@@ -150,6 +171,21 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.present(webKitVC, animated: true, completion: nil)
             
             
+        case 3:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+         
+            webKitVC.bookLink = genBookLink![indexPath.row]
+            
+            self.present(webKitVC, animated: true, completion: nil)
+            
+        case 4:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
+            pdfScreenVC.pdfName = localBooks[1]
+            self.present(pdfScreenVC, animated: true, completion: nil)
+            
+            
             
         default:
             print("No Book")
@@ -186,6 +222,20 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             
             self.present(webKitVC, animated: true, completion: nil)
             
+            
+        case 3:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+         
+            webKitVC.bookLink = genBookLink![indexPath.row]
+            
+            self.present(webKitVC, animated: true, completion: nil)
+            
+        case 4:
+            let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
+            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
+            pdfScreenVC.pdfName = localBooks[2]
+            self.present(pdfScreenVC, animated: true, completion: nil)
             
             
         default:
@@ -299,18 +349,24 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    }
-    
+}
 
-    
-
-
-
-//extension BooksViewController : UICollectionViewDelegateFlowLayout{
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize()
+//extension BooksViewController : UISearchBarDelegate{
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText : String){
+//        bookData.removeAll()
+//        print("in search")
+//        if searchText == "" {
+//            searching = false
+//            FetchBooks.fetchBooks =
+//        }
 //    }
 //}
+    
+
+    
+
+
+
+
 
 

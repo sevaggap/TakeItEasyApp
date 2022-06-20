@@ -237,6 +237,7 @@
                         <outlet property="CV1" destination="xmQ-dT-vhu" id="O7o-He-x19"/>
                         <outlet property="CV2" destination="sus-pe-5Y1" id="6D9-3f-Yym"/>
                         <outlet property="CV3" destination="oep-Z2-7vB" id="FWR-pf-6PG"/>
+                        <outlet property="searchBar" destination="HDd-pa-a5T" id="HuC-K1-vwh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCM-0C-zMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
