@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="-2275.36231884058" y="79.6875"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="MF9-HI-gE3">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="llD-du-g1a" customClass="LoginViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="Login" id="llD-du-g1a" customClass="LoginViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RIE-Ti-4aL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TakeItEasyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-06-Ymv">
                                 <rect key="frame" x="0.0" y="0.0" width="434" height="937"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your username and password below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBC-j1-ZzX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email and password below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBC-j1-ZzX">
                                 <rect key="frame" x="20" y="293" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2QB-4U-e6b"/>
@@ -391,10 +391,10 @@
             </objects>
             <point key="canvasLocation" x="-1239.1304347826087" y="79.6875"/>
         </scene>
-        <!--Signup View Controller-->
+        <!--Sign Up-->
         <scene sceneID="EjT-WU-tqV">
             <objects>
-                <viewController storyboardIdentifier="signupVC" id="rIa-gX-ddb" customClass="SignupViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVC" title="Sign Up" id="rIa-gX-ddb" customClass="SignupViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gTd-Mx-u38">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,8 +403,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="504" height="934"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your information below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-qM-ld3">
-                                <rect key="frame" x="75" y="278" width="264" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your information below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-qM-ld3">
+                                <rect key="frame" x="40" y="278" width="333" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.5" id="IrX-ie-HQc"/>
                                 </constraints>
@@ -452,23 +452,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-3K-Ead">
-                                <rect key="frame" x="42" y="608" width="332" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="9yN-ba-avO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.59747452570000004" green="0.61387429849999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="signIn:" destination="rIa-gX-ddb" eventType="touchUpInside" id="4sJ-p8-kIK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-N4-efd">
                                 <rect key="frame" x="41" y="567" width="332" height="33"/>
                                 <constraints>
@@ -476,7 +459,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.59747452570000004" green="0.61387429849999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get OTP">
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.59747452570000004" green="0.61387429849999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
@@ -509,7 +492,6 @@
                         <viewLayoutGuide key="safeArea" id="gGv-4l-9J5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gDj-3K-Ead" firstAttribute="leading" secondItem="gGv-4l-9J5" secondAttribute="leading" constant="42" id="0kJ-f8-siN"/>
                             <constraint firstItem="FUc-oz-MF0" firstAttribute="trailing" secondItem="gTd-Mx-u38" secondAttribute="trailingMargin" id="2pl-kZ-cgu"/>
                             <constraint firstItem="4VO-4N-EOl" firstAttribute="top" secondItem="dPN-qM-ld3" secondAttribute="bottom" constant="26.5" id="3iN-Rj-I49"/>
                             <constraint firstItem="iR0-5w-j9x" firstAttribute="leading" secondItem="Gf0-Mt-NgB" secondAttribute="leading" id="7JQ-V2-BM2"/>
@@ -519,20 +501,17 @@
                             <constraint firstItem="5OT-1n-I0D" firstAttribute="trailing" secondItem="iR0-5w-j9x" secondAttribute="trailing" id="BHb-N8-zNx"/>
                             <constraint firstItem="Gf0-Mt-NgB" firstAttribute="top" secondItem="iR0-5w-j9x" secondAttribute="bottom" constant="15" id="BP4-OP-1sP"/>
                             <constraint firstItem="FUc-oz-MF0" firstAttribute="top" secondItem="4Mg-Qy-wUr" secondAttribute="bottom" constant="24" id="Cd6-eF-Mdz"/>
-                            <constraint firstItem="XBJ-H2-Jve" firstAttribute="top" secondItem="gDj-3K-Ead" secondAttribute="bottom" constant="8" symbolic="YES" id="EIU-pY-FYx"/>
                             <constraint firstItem="JuY-N4-efd" firstAttribute="top" secondItem="Gf0-Mt-NgB" secondAttribute="bottom" constant="14" id="FAw-u1-LkR"/>
                             <constraint firstItem="Gf0-Mt-NgB" firstAttribute="leading" secondItem="JuY-N4-efd" secondAttribute="leading" id="FJ1-n5-nJS"/>
                             <constraint firstItem="Gf0-Mt-NgB" firstAttribute="trailing" secondItem="JuY-N4-efd" secondAttribute="trailing" id="Hi2-aI-1G5"/>
                             <constraint firstItem="JuY-N4-efd" firstAttribute="trailing" secondItem="XBJ-H2-Jve" secondAttribute="trailing" id="KlR-Gi-Jfs"/>
                             <constraint firstItem="dPN-qM-ld3" firstAttribute="centerX" secondItem="4VO-4N-EOl" secondAttribute="centerX" id="L7f-1X-FjM"/>
-                            <constraint firstItem="dPN-qM-ld3" firstAttribute="centerX" secondItem="gDj-3K-Ead" secondAttribute="centerX" id="Lrm-fo-sZw"/>
                             <constraint firstItem="JuY-N4-efd" firstAttribute="centerX" secondItem="XBJ-H2-Jve" secondAttribute="centerX" id="O4a-ZF-WDm"/>
                             <constraint firstItem="EPU-CG-Teh" firstAttribute="trailing" secondItem="5OT-1n-I0D" secondAttribute="trailing" id="SSF-Q5-ubh"/>
                             <constraint firstItem="5OT-1n-I0D" firstAttribute="leading" secondItem="iR0-5w-j9x" secondAttribute="leading" id="UBi-YM-VtD"/>
-                            <constraint firstItem="gDj-3K-Ead" firstAttribute="top" secondItem="JuY-N4-efd" secondAttribute="bottom" constant="8" symbolic="YES" id="VTv-S6-tYO"/>
                             <constraint firstItem="EPU-CG-Teh" firstAttribute="top" secondItem="4VO-4N-EOl" secondAttribute="bottom" constant="14" id="Xcg-8d-t06"/>
                             <constraint firstItem="gGv-4l-9J5" firstAttribute="bottom" secondItem="XBJ-H2-Jve" secondAttribute="bottom" constant="135" id="YWl-p5-CSf"/>
-                            <constraint firstItem="dPN-qM-ld3" firstAttribute="leading" secondItem="gGv-4l-9J5" secondAttribute="leading" constant="75" id="ZSa-dv-h1O"/>
+                            <constraint firstItem="dPN-qM-ld3" firstAttribute="leading" secondItem="gGv-4l-9J5" secondAttribute="leading" constant="40" id="ZSa-dv-h1O"/>
                             <constraint firstItem="4Mg-Qy-wUr" firstAttribute="top" secondItem="gGv-4l-9J5" secondAttribute="top" id="a8v-n6-JDP"/>
                             <constraint firstItem="iR0-5w-j9x" firstAttribute="trailing" secondItem="Gf0-Mt-NgB" secondAttribute="trailing" id="aqv-z9-cRO"/>
                             <constraint firstItem="5OT-1n-I0D" firstAttribute="top" secondItem="EPU-CG-Teh" secondAttribute="bottom" constant="15" id="b4i-ki-hOx"/>
