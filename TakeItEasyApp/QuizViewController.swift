@@ -368,8 +368,11 @@ extension QuizViewController {
         }
     }
     func showResultCircle(numberOfCorrect : CGFloat, numberOfTotal : CGFloat) {
-
-        let bezierPath_NumberOfCorrect = UIBezierPath(arcCenter: containerViewQuizPicker.center, radius: 90, startAngle: -.pi / 2, endAngle: .pi * (2 - 1 / 2) * CGFloat(numberOfCorrect / numberOfTotal), clockwise: true)
+        var bezierPath_NumberOfCorrect = UIBezierPath(arcCenter: containerViewQuizPicker.center, radius: 90, startAngle: -.pi / 2, endAngle: .pi * (2 - 1 / 2) * CGFloat(numberOfCorrect / numberOfTotal), clockwise: true)
+        
+        if numberOfCorrect == 0 {
+            bezierPath_NumberOfCorrect = UIBezierPath(arcCenter: containerViewQuizPicker.center, radius: 90, startAngle: -.pi / 2, endAngle: -.pi / 2 + .pi / 16, clockwise: true)
+        }
         
         let bezierPath_NumberOfQuestion = UIBezierPath(arcCenter: containerViewQuizPicker.center, radius: 90, startAngle: -.pi / 2, endAngle: .pi * (2 - 1 / 2), clockwise: true)
         
