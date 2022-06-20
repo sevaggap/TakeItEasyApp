@@ -58,20 +58,15 @@
 		F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF350285EC3A700FDF4D9 /* recipe.pdf */; };
 		F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF352285EC8F300FDF4D9 /* technical.pdf */; };
 		F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF353285EC8F300FDF4D9 /* general.pdf */; };
+		F56BBC122860C6C800BB9A0C /* BookModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56BBC112860C6C800BB9A0C /* BookModelStruct.swift */; };
+		F56BBC142860C71D00BB9A0C /* FetchBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56BBC132860C71D00BB9A0C /* FetchBooks.swift */; };
+		F56BBC162860C7ED00BB9A0C /* WebUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56BBC152860C7ED00BB9A0C /* WebUIKit.swift */; };
 		F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704930285792600062DCB7 /* PdfScreenViewController.swift */; };
 		F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */; };
 		F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */; };
 		F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */; };
 		F570493B285793540062DCB7 /* Zahid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F570493A285793540062DCB7 /* Zahid.storyboard */; };
-		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
-		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
-		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
 		F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049842858D6A70062DCB7 /* BooksViewController.swift */; };
-		F57049872858DDA40062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049862858DDA40062DCB7 /* BooksViewController.swift */; };
-		F57049892858DDCB0062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049882858DDCB0062DCB7 /* BooksViewController.swift */; };
-		F57049EC285A77B40062DCB7 /* FetchBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049EB285A77B40062DCB7 /* FetchBooks.swift */; };
-		F57049EE285B89C90062DCB7 /* BookModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049ED285B89C90062DCB7 /* BookModelStruct.swift */; };
-		F57049F0285BC2580062DCB7 /* WebUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049EF285BC2570062DCB7 /* WebUIKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,20 +142,17 @@
 		F53FF350285EC3A700FDF4D9 /* recipe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = recipe.pdf; sourceTree = "<group>"; };
 		F53FF352285EC8F300FDF4D9 /* technical.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = technical.pdf; sourceTree = "<group>"; };
 		F53FF353285EC8F300FDF4D9 /* general.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = general.pdf; sourceTree = "<group>"; };
+		F56BBC112860C6C800BB9A0C /* BookModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModelStruct.swift; sourceTree = "<group>"; };
+		F56BBC132860C71D00BB9A0C /* FetchBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooks.swift; sourceTree = "<group>"; };
+		F56BBC152860C7ED00BB9A0C /* WebUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIKit.swift; sourceTree = "<group>"; };
 		F5704930285792600062DCB7 /* PdfScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfScreenViewController.swift; sourceTree = "<group>"; };
 		F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F570493A285793540062DCB7 /* Zahid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Zahid.storyboard; sourceTree = "<group>"; };
-		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
-		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
-		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
 		F57049842858D6A70062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049862858DDA40062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049882858DDCB0062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		F57049EB285A77B40062DCB7 /* FetchBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooks.swift; sourceTree = "<group>"; };
-		F57049ED285B89C90062DCB7 /* BookModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModelStruct.swift; sourceTree = "<group>"; };
-		F57049EF285BC2570062DCB7 /* WebUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,16 +319,15 @@
 				F53FF352285EC8F300FDF4D9 /* technical.pdf */,
 				F57049862858DDA40062DCB7 /* BooksViewController.swift */,
 				F57049882858DDCB0062DCB7 /* BooksViewController.swift */,
-				F57049ED285B89C90062DCB7 /* BookModelStruct.swift */,
 				F570493A285793540062DCB7 /* Zahid.storyboard */,
-				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
-				F570493C285795690062DCB7 /* hpbook2.pdf */,
-				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
 				F57049842858D6A70062DCB7 /* BooksViewController.swift */,
 				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
 				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
 				F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */,
 				F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */,
+				F56BBC112860C6C800BB9A0C /* BookModelStruct.swift */,
+				F56BBC132860C71D00BB9A0C /* FetchBooks.swift */,
+				F56BBC152860C7ED00BB9A0C /* WebUIKit.swift */,
 			);
 			path = ZahidBook;
 			sourceTree = "<group>";
@@ -445,8 +436,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
-				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
 				E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */,
@@ -493,6 +482,7 @@
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
 				252A1CE5285F592B007145A5 /* QuizViewController.swift in Sources */,
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
+				F56BBC162860C7ED00BB9A0C /* WebUIKit.swift in Sources */,
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
 				9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */,
 				258C46F5285F681800F9FE4A /* QuizCollectionViewCell.swift in Sources */,
@@ -507,6 +497,7 @@
 				E9FE993B285AF67C000FD882 /* DeezerAPI.swift in Sources */,
 				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
+				F56BBC122860C6C800BB9A0C /* BookModelStruct.swift in Sources */,
 				F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */,
 				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
@@ -523,6 +514,7 @@
 				CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
+				F56BBC142860C71D00BB9A0C /* FetchBooks.swift in Sources */,
 				F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */,
 				CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */,
 			);

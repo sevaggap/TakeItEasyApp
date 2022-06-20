@@ -42,17 +42,41 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         if collectionView == self.CV1{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! GeneralCollectionViewCell
-        cell.bookImage.image = UIImage(named: bookIMG[indexPath.row])
+        cell.bookImage.image = UIImage(named: genBookIMG[indexPath.row])
+            cell.contentMode = .scaleAspectFit
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: -1)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 1
+            cell.layer.masksToBounds = true
             return cell
         }; if collectionView == self.CV2{
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! TechnicalCollectionViewCell
-            cell.bookImage.image = UIImage(named: bookIMG[indexPath.row])
+            cell.bookImage.image = UIImage(named: techBookIMG[indexPath.row])
+            cell.contentMode = .scaleAspectFit
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: -1)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 1
+            cell.layer.masksToBounds = true
             return cell
         }else{
             //collectionView == self.CV3
                        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! RecipesCollectionViewCell
-                    cell.bookImage.image = UIImage(named: bookIMG[indexPath.row])
+                    cell.bookImage.image = UIImage(named: recBookIMG[indexPath.row])
+            cell.contentMode = .scaleAspectFit
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: -1)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 1
+            cell.layer.masksToBounds = true
                 return cell
                 
     }
@@ -173,29 +197,29 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         case 0 :
             
             let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
-            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
-            pdfScreenVC.pdfName = bookData[indexPath.row]
-            self.present(pdfScreenVC, animated: true, completion: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+            webKitVC.bookLink = recBookLink![indexPath.row]
+            self.present(webKitVC, animated: true, completion: nil)
             
         case 1:
             
             let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
-            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
-            pdfScreenVC.pdfName = bookData[indexPath.row]
-            self.present(pdfScreenVC, animated: true, completion: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+            webKitVC.bookLink = recBookLink![indexPath.row]
+            self.present(webKitVC, animated: true, completion: nil)
 
         case 2:
             
             let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
-            let pdfScreenVC = storyObject.instantiateViewController(withIdentifier: "pdfScreen") as! PdfScreenViewController
-            pdfScreenVC.pdfName = bookData[indexPath.row]
-            self.present(pdfScreenVC, animated: true, completion: nil)
+            let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
+            webKitVC.bookLink = recBookLink![indexPath.row]
+            self.present(webKitVC, animated: true, completion: nil)
             
         case 3:
             let storyObject = UIStoryboard(name: "Zahid", bundle: nil)
             let webKitVC = storyObject.instantiateViewController(withIdentifier: "webScreen") as! WebUIKit
          
-            webKitVC.bookLink = genBookLink![indexPath.row]
+            webKitVC.bookLink = recBookLink![indexPath.row]
             
             self.present(webKitVC, animated: true, completion: nil)
             
@@ -210,13 +234,13 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             print("No Book")
         }
     }
-        
+}
         
 
     
 
           override func viewDidLoad() {
-        super.viewDidLoad()
+              super.viewDidLoad()
               
               title = "Books"
 
@@ -330,6 +354,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
 
     
+
 
 
 
