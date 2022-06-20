@@ -2,14 +2,15 @@
 //  QuizCollectionViewCell.swift
 //  TakeItEasyApp
 //
-//  Created by Xavier on 6/16/22.
+//  Created by Xavier on 6/19/22.
 //
 
 import UIKit
 
 class QuizCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var labelQuizID: UILabel!
-    @IBOutlet weak var imageViewThumbnail: UIImageView!
-    @IBOutlet weak var labelQuizDescription: UILabel!
-    @IBOutlet weak var imageViewCompleted: UIImageView!
+    @IBOutlet weak var labelQuizDesc: UILabel!
+    @IBOutlet weak var imageViewQuizProgress: UIImageView!
+    @IBOutlet weak var imageViewQuizImage: UIImageView!
 }
