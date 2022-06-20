@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SignupViewController: UIViewController {
       var errorMsgSignUp = ""
@@ -29,6 +30,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideLabelErrormsg()
+        UNUserNotificationCenter.current().delegate = self
+        
     }
     
     @IBAction func getOTP(_ sender: Any) {
@@ -36,11 +39,9 @@ class SignupViewController: UIViewController {
             if regexValidation(name: userName.text!, email: userEmail.text!, password: userPassword.text!){
                if credentialValidation(email: userEmail.text!){
                    
-                   OTP = Int.random(in: 100000...999999)
-            
-                   let OTPMessage = UIAlertController(title: "Alert", message: "Your OTP is \(OTP!)", preferredStyle: .alert)
-                   
-                   let alert = UIAlertController(title: "Your OTP is: \(OTP!)", message: "Please enter your OTP below", preferredStyle: .alert)
+                   sendNotification()
+                                                  
+                   let alert = UIAlertController(title: "OTP Confirmation", message: "Please enter your OTP below", preferredStyle: .alert)
                    
                    let confirm = UIAlertAction(title: "Confirm", style: .default, handler: { _ in
                        guard let fields = alert.textFields, fields.count == 1 else {
@@ -64,7 +65,6 @@ class SignupViewController: UIViewController {
                    
                    present(alert, animated: true)
                    
-                   //call saveLastUser function
                    print("validated")
                    print("hello")
                    hideLabelErrormsg()
@@ -84,9 +84,22 @@ class SignupViewController: UIViewController {
     
     func confirmOTP(userOTP : Int) {
                 
-        if( userOTP == OTP!){
+        if(userOTP == OTP!){
             DBHelper.dbHelper.addData(nameValue: userName.text!, passValue: userPassword.text!, emailValue: userEmail.text!)
-            labelErrormsg.text = "User successfully created. Please login on the previous page!"
+            let userCreatedAlert = UIAlertController(title: "User Successfully Created!", message: "Please login!", preferredStyle: .alert)
+            
+            let confirm = UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+                
+                let storyboard = UIStoryboard(name: "Bristy", bundle: nil)
+                let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                loginScreen.modalPresentationStyle = .fullScreen
+                self.present(loginScreen, animated: true, completion: nil)
+                
+            })
+            
+            userCreatedAlert.addAction(confirm)
+            present(userCreatedAlert, animated: true)
+            
         } else {
             let wrongOTPAlert = UIAlertController(title: "Incorrect OTP", message: "The OTP you entered was inccorect! Please try again.", preferredStyle: .alert)
             
@@ -107,5 +120,46 @@ class SignupViewController: UIViewController {
     func saveLastUser(){
         let userDefault = UserDefaults.standard
         userDefault.set(userName, forKey: "lastUser")
+    }
+}
+
+extension SignupViewController : UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner])
+    }
+    
+    func sendNotification(){
+        UNUserNotificationCenter.current().getNotificationSettings(completionHandler: {notify in
+            switch notify.authorizationStatus{
+            case .notDetermined:
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]){ granted, err in
+                    if let error = err {
+                        print("error in permission")
+                    }
+                    self.generateNotification()
+                }
+            case .authorized:
+                self.generateNotification()
+            case.denied:
+                print("permission not graned")
+            default:
+                print("")
+            }
+        })
+        
+    }
+    
+    func generateNotification(){
+        OTP = Int.random(in: 100000...999999)
+        let content = UNMutableNotificationContent()
+        content.title = "OTP"
+        content.subtitle = "From Take it Easy"
+        content.body = "Your OTP is \(OTP!)"
+        
+        let timeInterval = UNTimeIntervalNotificationTrigger(timeInterval: 1.0, repeats: false)
+        let request = UNNotificationRequest(identifier: "OTP", content: content, trigger: timeInterval)
+        UNUserNotificationCenter.current().add(request)
+        
     }
 }

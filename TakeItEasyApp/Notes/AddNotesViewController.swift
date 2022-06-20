@@ -11,14 +11,14 @@ import Speech
 class AddNotesViewController: UIViewController {
 
     @IBOutlet weak var noteTitle: UITextField!
-    @IBOutlet weak var noteBody: UITextField!
+    @IBOutlet weak var noteBody: UITextView!
     @IBOutlet weak var textToSpeechLabel: UILabel!
     
     let audioEngine = AVAudioEngine()
     let speechRecognizer = SFSpeechRecognizer()
     let bufferRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask : SFSpeechRecognitionTask!
-    var isStrat = false
+    var isStart = false
     
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class AddNotesViewController: UIViewController {
     
 
     @IBAction func startTextToSpeech(_ sender: Any) {
-        if(isStrat) {
+        if(isStart) {
             cancelSpeechRecognition()
             textToSpeechLabel.text = ""
         } else {
@@ -68,7 +68,7 @@ class AddNotesViewController: UIViewController {
             
         })
         
-        isStrat = true
+        isStart = true
         
     }
     
@@ -81,6 +81,6 @@ class AddNotesViewController: UIViewController {
         if audioEngine.inputNode.numberOfInputs > 0 {
             audioEngine.inputNode.removeTap(onBus: 0)
         }
-        isStrat = false
+        isStart = false
     }
 }
