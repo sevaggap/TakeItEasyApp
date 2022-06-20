@@ -135,14 +135,8 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nv9-Ul-0aK">
-                                <rect key="frame" x="19" y="145" width="378" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMT-nc-hBA">
-                                <rect key="frame" x="303" y="54" width="93" height="31"/>
+                                <rect key="frame" x="238" y="93" width="93" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
@@ -152,19 +146,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Il-kS-xCo">
-                                <rect key="frame" x="313" y="99" width="81" height="31"/>
+                                <rect key="frame" x="312" y="93" width="82" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system" title="Text"/>
+                                <connections>
+                                    <action selector="startTextToSpeech:" destination="cqe-KK-meX" eventType="touchUpInside" id="9iH-i1-aOD"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSO-Rq-mgC">
+                                <rect key="frame" x="40" y="343" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9YY-sV-0Yg">
+                                <rect key="frame" x="20" y="132" width="374" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fVf-6a-HeE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="noteBody" destination="Nv9-Ul-0aK" id="ML4-g7-8WT"/>
+                        <outlet property="noteBody" destination="9YY-sV-0Yg" id="PVy-jU-xkT"/>
                         <outlet property="noteTitle" destination="gyg-SZ-hjz" id="yD7-iC-spo"/>
+                        <outlet property="textToSpeechLabel" destination="iSO-Rq-mgC" id="jYi-MZ-oli"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qkv-Oe-G7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,18 +199,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cex-IX-UcX">
                                 <rect key="frame" x="19" y="93" width="377" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mw0-QV-xYA">
-                                <rect key="frame" x="18.5" y="145" width="377" height="627"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4P-dF-Cc1">
-                                <rect key="frame" x="320" y="54" width="80" height="31"/>
+                                <rect key="frame" x="249" y="93" width="80" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
@@ -214,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-Y0-8NR">
-                                <rect key="frame" x="296" y="95" width="104" height="31"/>
+                                <rect key="frame" x="308" y="95" width="88" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
@@ -223,13 +230,21 @@
                                     <action selector="startTextToSpeech:" destination="wqe-gl-2BZ" eventType="touchUpInside" id="DHZ-mV-esd"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-7h-KRd">
+                                <rect key="frame" x="19" y="135" width="375" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MVO-3E-eZr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="s7a-YB-nPI"/>
                     <connections>
-                        <outlet property="noteBody" destination="Mw0-QV-xYA" id="Qr6-Lm-geC"/>
+                        <outlet property="noteBody" destination="wv1-7h-KRd" id="DzH-SJ-PSz"/>
                         <outlet property="noteTitle" destination="Cex-IX-UcX" id="NL4-ut-Jc6"/>
                         <outlet property="textToSpeechLabel" destination="xaw-EJ-2iL" id="P62-3L-HF6"/>
                     </connections>
@@ -265,14 +280,14 @@
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -39,9 +39,10 @@ class NotesHelper {
         var user = User()
         var notes =  [UsersNotes]()
         let userEmail = userDefaults.string(forKey: "lastUser")
+        let userName = DBHelperUser.dbHelperUser.readUser(email: userEmail!).name
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        fetchRequest.predicate = NSPredicate(format: "email: %@", userEmail!)
+        fetchRequest.predicate = NSPredicate(format: "name == %@", userName!)
         
         do{
             let users = try context?.fetch(fetchRequest)
@@ -79,15 +80,16 @@ class NotesHelper {
         
         var user = User()
         let userEmail = userDefaults.string(forKey: "lastUser")
+        let userName = DBHelperUser.dbHelperUser.readUser(email: userEmail!).name
         
-        let note = NSEntityDescription.insertNewObject(forEntityName: "UserNotes", into: context!) as! UsersNotes
+        let note = NSEntityDescription.insertNewObject(forEntityName: "UsersNotes", into: context!) as! UsersNotes
         note.noteId = Int64.random(in: 1...1000000)
         note.title = title
         note.body = body
         note.date = Date()
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        fetchRequest.predicate = NSPredicate(format: "email: %@", userEmail!)
+        fetchRequest.predicate = NSPredicate(format: "name == %@", userName!)
         
         do{
             let users = try context?.fetch(fetchRequest)

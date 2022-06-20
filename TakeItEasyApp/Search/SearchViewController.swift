@@ -9,7 +9,9 @@ import UIKit
 import WebKit
 
 class SearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var navBar: UINavigationItem!
+    
     // when the view is loaded, the webpage Google will be displayed on the View using Webkit
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,8 @@ class SearchViewController: UIViewController {
         let url = URL(string: "https://www.google.com/")!
         webKitView.load(URLRequest(url: url))
         view = webKitView
+        CurrentUser.user.updateCurrentUserName()
+        navBar.title = CurrentUser.user.name
     }
     
 }
