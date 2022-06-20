@@ -44,7 +44,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="q3E-g4-iS0">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" id="4Ul-Lz-2Mx" customClass="TabBarController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBars" id="4Ul-Lz-2Mx" customClass="TabBarController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MDC-ip-4DX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
