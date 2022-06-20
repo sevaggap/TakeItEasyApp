@@ -14,6 +14,6 @@ extension MusicViewController{
     func setMusicAV(musicUrl : URL){
         playerItem = AVPlayerItem(url: musicUrl)
         player = AVPlayer(playerItem: playerItem)
-        player?.play()
+       
     }
 }

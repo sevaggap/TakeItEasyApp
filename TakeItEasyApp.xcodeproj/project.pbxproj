@@ -42,6 +42,8 @@
 		CE3C511B28579E7600A51227 /* DBHelperUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511A28579E7600A51227 /* DBHelperUser.swift */; };
 		CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511D28579F6600A51227 /* LoginValidation.swift */; };
 		CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511F28579F7200A51227 /* SignupValidation.swift */; };
+		E91326C52860C905003DDABE /* Away.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E91326C42860C905003DDABE /* Away.mp3 */; };
+		E91326C72860C955003DDABE /* Drive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E91326C62860C955003DDABE /* Drive.mp3 */; };
 		E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */; };
 		E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */; };
 		E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF78285D16C6003259CA /* Sky.mp3 */; };
@@ -126,6 +128,8 @@
 		CE3C511A28579E7600A51227 /* DBHelperUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelperUser.swift; sourceTree = "<group>"; };
 		CE3C511D28579F6600A51227 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		CE3C511F28579F7200A51227 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
+		E91326C42860C905003DDABE /* Away.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Away.mp3; sourceTree = "<group>"; };
+		E91326C62860C955003DDABE /* Drive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drive.mp3; sourceTree = "<group>"; };
 		E96BDE5E2857B12500A304A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/JamesMusic.storyboard; sourceTree = "<group>"; };
 		E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sun Is Shining.mp3"; sourceTree = "<group>"; };
 		E9BBEF78285D16C6003259CA /* Sky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sky.mp3; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */,
+				E91326C42860C905003DDABE /* Away.mp3 */,
+				E91326C62860C955003DDABE /* Drive.mp3 */,
 				E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */,
 				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
 				E9BBEF78285D16C6003259CA /* Sky.mp3 */,
@@ -442,6 +448,7 @@
 				F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */,
 				F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
+				E91326C72860C955003DDABE /* Drive.mp3 in Resources */,
 				9413CF942857E8D2007E7989 /* Search.storyboard in Resources */,
 				E9BBEF7B285D1744003259CA /* Enchante.mp3 in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
@@ -449,6 +456,7 @@
 				E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */,
 				E9BBEF7D285D17D7003259CA /* Hawaii.mp3 in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
+				E91326C52860C905003DDABE /* Away.mp3 in Resources */,
 				E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
 				F570493B285793540062DCB7 /* Zahid.storyboard in Resources */,

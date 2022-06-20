@@ -8,7 +8,12 @@
 import UIKit
 import AVFoundation
 
-class MusicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+class MusicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+    
+    var globalIndexPath : IndexPath?
+    @IBOutlet weak var musicCV: UICollectionView!
+    var search : Bool = false
     
     @IBOutlet weak var circleImage3: UIImageView!
     @IBOutlet weak var circleImage2: UIImageView!
@@ -28,15 +33,130 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var forward: UIImageView!
     @IBOutlet weak var backward: UIImageView!
     
+    var songChange : Bool = false
+    var songNum : Int = 0
+    var count : Int = 0
     var tileSelected : Int = 0
     var playBool = true
     var uCell : MusicCollectionViewCell?
-    var musicList = ["Deezer", "Sky", "Hawaii", "Enchante", "Sun is Shining"]
+    var musicList = ["Deezer", "Sky", "Hawaii", "Enchante", "Drive"]
     var Audio : AVAudioPlayer?
     var timer : Timer?
     var mModel : MusicModel?
+    
     var sURL = URL(string:"Sky")
-    var mUrl = URL(string: "https://api.deezer.com/track/3135556")!
+    var mUrl = URL(string: "https://api.deezer.com/track/1522223672")!
+    var searchPlay : Bool = false
+  
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("helo")
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("hello")
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+         
+        print("hi")
+       if(tileSelected == 0)
+        {
+           
+           var str = searchBar.text!
+           var strrep = str.replacingOccurrences(of: " ", with: "_")
+           var newstr = "https://api.deezer.com/search?q=" + strrep
+           var searchUrl = URL(string: newstr)
+           print(searchUrl)
+           getDataSearch(url: searchUrl!, completion: { result in
+            switch result{
+            case .failure(let error):
+                print("sw", error)
+            case .success(let res):
+                self.mModel = res.data.first
+                print()
+                self.sURL = URL(string: self.mModel!.preview)
+                self.songChange = true
+
+                self.setMusicAV(musicUrl: self.sURL!)
+                //for item in res.album
+
+                self.getMusicImage(urlstring: (self.mModel?.album.cover_medium)!)
+                self.player?.pause()
+                self.player?.play()
+                self.searchPlay = true
+            }
+            })
+       }
+        
+        
+    }
+    
+    func shuffle()
+    {
+        var randomInt = 1
+        repeat{
+         randomInt = Int.random(in: 0..<5)
+        } while (randomInt == songNum)
+        songNum = randomInt
+        switch songNum{
+        case 0:
+            mUrl = URL(string: "https://api.deezer.com/track/3135556")!
+        case 1:
+            mUrl = URL(string: "https://api.deezer.com/track/1432930542")!
+        case 2:
+            mUrl = URL(string: "https://api.deezer.com/track/142706538")!
+        case 3:
+            mUrl = URL(string: "https://api.deezer.com/track/1703487577")!
+        case 4:
+            mUrl = URL(string: "https://api.deezer.com/track/1411181832")!
+        case 5:
+            mUrl = URL(string: "https://api.deezer.com/track/1765270907")!
+        case 6:
+            mUrl = URL(string: "https://api.deezer.com/track/435491482")!
+        case 7:
+            mUrl = URL(string: "https://api.deezer.com/track/86773062")!
+        case 8:
+            mUrl = URL(string: "https://api.deezer.com/track/1703487577")!
+        case 9:
+            mUrl = URL(string: "https://api.deezer.com/track/1614228152")!
+        default:
+            mUrl = URL(string: "https://api.deezer.com/track/8086136")!
+        
+            
+        }
+        
+        getData(url: mUrl, completion: { result in
+            switch result{
+            case .failure(let error):
+                print("sw", error)
+            case .success(let res):
+                self.mModel = res
+                print()
+                self.sURL = URL(string: self.mModel!.preview)
+                self.songChange = true
+                
+                self.setMusicAV(musicUrl: self.sURL!)
+                //for item in res.album
+                
+                self.getMusicImage(urlstring: (self.mModel?.album.cover_medium)!)
+                self.changeSong()
+            }
+            })
+    }
+    
+    func getMusicImage(urlstring : String)
+    {
+        let url = URL(string: urlstring)
+
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            DispatchQueue.main.async { [self] in
+                
+                var img = UIImageView()
+                img.image = UIImage(data: data!)
+                self.mainAnimated(img: img)
+            }
+        }
+    }
     
     func viewDidLoad_TransparentNavBar() {
             let appearance = UINavigationBarAppearance()
@@ -49,12 +169,21 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
 //            CurrentUser.user.updateCurrentUserName()
 //            navItemUserName.title = CurrentUser.user.name
 //    }
+    
+    
+ 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.enablesReturnKeyAutomatically = true
         
+      
         viewDidLoad_TransparentNavBar()
         //viewDidLoad_PopulateCurrentUserName()
         uiConfig()
+        
+        
         
         
        
@@ -66,12 +195,15 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
                 self.mModel = res
                 print()
                 self.sURL = URL(string: self.mModel!.preview)
+              
                 self.setMusicAV(musicUrl: self.sURL!)
+                self.getMusicImage(urlstring: (self.mModel?.album.cover_medium)!)
+                
                 
         }
         
         })
-        playBool = false
+        playBool = true
         playback()
         
         var timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
@@ -90,6 +222,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        globalIndexPath = indexPath
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
         
         cell.musicImage.image = UIImage(imageLiteralResourceName: musicList[indexPath.row])
@@ -148,7 +281,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         
         mainMusicLabel.text = musicList[tileSelected]
-        mainAnimated()
+        //mainAnimated()
         
         
         //print (cell.musicLabel.text!)
@@ -195,12 +328,12 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         player?.play()
         playBool = true
         playPause.image = UIImage(systemName: "pause.fill")
-        mainMusicLabel.text = musicList[tileSelected]
-        mainAnimated()
+        
         
     }
     
     @IBAction func prevAction(_ sender: UITapGestureRecognizer) {
+        
         if(tileSelected == 0)
         {
             tileSelected = musicList.count-1
@@ -218,8 +351,6 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         player?.play()
         playBool = true
         playPause.image = UIImage(systemName: "pause.fill")
-        mainMusicLabel.text = musicList[tileSelected]
-        mainAnimated()
     }
     
     func playback(){
@@ -230,7 +361,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
             playBool = false
             player?.pause()
         }
-        else if (playBool == false)
+        else
         {
             playPause.image = UIImage(systemName: "pause.fill")
             playBool = true
@@ -241,7 +372,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
-    func mainAnimated()
+    func mainAnimated(img : UIImageView)
     {
        
         mainMusicImage.layer.cornerRadius = mainMusicImage.frame.height/2
@@ -250,7 +381,8 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         mainMusicImage.addSubview(sView)
         mainMusicImage.layer.masksToBounds = true
         
-        
+        if img.image == mainMusicImage.image
+        {
         UIView.animate(withDuration: 0.5, animations: {
             self.mainMusicImage.transform = CGAffineTransform(scaleX: -0.01, y: 1.0)
         }, completion: {
@@ -261,7 +393,23 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
             }, completion: nil)
 
         })
+        }
+        else
+        {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.mainMusicImage.transform = CGAffineTransform(scaleX: -0.01, y: 1.0)
+            }, completion: {
+                _ in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.mainMusicImage.image = img.image
+                    self.mainMusicImage.transform = .identity
+                }, completion: nil)
+
+            })
+            
+        }
     }
+        
     
     func setBorder(subView : UIView, size :CGSize) -> UIView
     {
@@ -282,11 +430,35 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         if (tileSelected != 0)
         {
             let local_sURL = Bundle.main.url(forResource: musicList[tileSelected], withExtension: "mp3")
+            print(tileSelected)
+            mainAnimated(img: mainMusicImage)
+            mainMusicLabel.text = musicList[tileSelected]
             setMusicAV(musicUrl: local_sURL!)
+            
         }
         else{
-            setMusicAV(musicUrl: sURL!)
+          
+            if (songChange == false)
+            {
+                
+                shuffle()
+                            }
+            else
+            {
+                player?.play()
+               // mainMusicLabel.text = musicList[tileSelected]
+                //playBool = true
+                
+                
+                
+                
+                songChange = false
+            }
+            
+            //setMusicAV(musicUrl: sURL!)
         }
+        
+      
     }
     
     func progressCheck(){
@@ -294,8 +466,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         var currTime = player?.currentTime().seconds
         var duration = player?.currentItem?.duration.seconds
         
-        print (currTime!)
-        print (duration!)
+        
         progressBar.progress = Float(currTime!/duration!)
         
     }
@@ -303,17 +474,31 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     @objc func checkUpdates(){
+       if tileSelected != 0
+        {
+           searchBar.placeholder = "Select Deezer to search for songs"
+       }
+        else
+        {
+            searchBar.placeholder = "Search for songs in Deezer"
+        }
+        if (searchPlay == true)
+        {
+            playPause.image = UIImage(systemName: "pause.fill")
+            searchPlay = false
+        }
+      
         if (mModel != nil && playerItem != nil && player != nil)
         {
             progressCheck()
             if tileSelected == 0
             {mainMusicLabel.text = mModel?.title}
-        
         }
-            
+          
+        
     }
     
-     }
+    
     /*
     // MARK: - Navigation
 
@@ -324,4 +509,5 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     */
 
-
+    
+}
