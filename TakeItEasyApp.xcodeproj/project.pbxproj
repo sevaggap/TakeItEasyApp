@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252A1CE3285F58F7007145A5 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A1CE2285F58F7007145A5 /* CurrentUser.swift */; };
+		252A1CE5285F592B007145A5 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A1CE4285F592B007145A5 /* QuizViewController.swift */; };
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
+		258C46F5285F681800F9FE4A /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258C46F4285F681800F9FE4A /* QuizCollectionViewCell.swift */; };
+		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
+		94236737285C258A002BEEAE /* LoginAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94236736285C258A002BEEAE /* LoginAlerts.swift */; };
+		9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9423701B2858D733006BE3DF /* SearchViewController.swift */; };
 		942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FE8FD28579D2200CEBEF2 /* Notes.storyboard */; };
 		9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AD28514170009F9205 /* NotesViewController.swift */; };
 		9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447B9AF2851424A009F9205 /* NotesHelper.swift */; };
@@ -37,11 +43,18 @@
 		CE3C511E28579F6600A51227 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511D28579F6600A51227 /* LoginValidation.swift */; };
 		CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511F28579F7200A51227 /* SignupValidation.swift */; };
 		E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */; };
+		E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */; };
+		E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF78285D16C6003259CA /* Sky.mp3 */; };
+		E9BBEF7B285D1744003259CA /* Enchante.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF7A285D1744003259CA /* Enchante.mp3 */; };
+		E9BBEF7D285D17D7003259CA /* Hawaii.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */; };
 		E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EB81DD28539B9600BCBC40 /* Friday.png */; };
 		E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6228228524256004FD5C6 /* MusicViewController.swift */; };
 		E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */; };
 		E9F622D328530FEF004FD5C6 /* Someday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D228530FEF004FD5C6 /* Someday.mp3 */; };
 		E9F622D52853170B004FD5C6 /* Dark Ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F622D42853170B004FD5C6 /* Dark Ocean.png */; };
+		E9FE9939285AF244000FD882 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE9938285AF244000FD882 /* MusicPlayer.swift */; };
+		E9FE993B285AF67C000FD882 /* DeezerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE993A285AF67C000FD882 /* DeezerAPI.swift */; };
+		E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */; };
 		F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF350285EC3A700FDF4D9 /* recipe.pdf */; };
 		F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF352285EC8F300FDF4D9 /* technical.pdf */; };
 		F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F53FF353285EC8F300FDF4D9 /* general.pdf */; };
@@ -50,6 +63,10 @@
 		F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */; };
 		F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */; };
 		F570493B285793540062DCB7 /* Zahid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F570493A285793540062DCB7 /* Zahid.storyboard */; };
+		F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493C285795690062DCB7 /* hpbook2.pdf */; };
+		F57049402857956B0062DCB7 /* hpbook3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493D2857956A0062DCB7 /* hpbook3.pdf */; };
+		F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F570493E2857956B0062DCB7 /* hpbook1.pdf */; };
+		F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049842858D6A70062DCB7 /* BooksViewController.swift */; };
 		F57049872858DDA40062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049862858DDA40062DCB7 /* BooksViewController.swift */; };
 		F57049892858DDCB0062DCB7 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049882858DDCB0062DCB7 /* BooksViewController.swift */; };
 		F57049EC285A77B40062DCB7 /* FetchBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049EB285A77B40062DCB7 /* FetchBooks.swift */; };
@@ -75,8 +92,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252A1CE2285F58F7007145A5 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		252A1CE4285F592B007145A5 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
+		258C46F4285F681800F9FE4A /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
+		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		94236736285C258A002BEEAE /* LoginAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlerts.swift; sourceTree = "<group>"; };
+		9423701B2858D733006BE3DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		942FE8FD28579D2200CEBEF2 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9447B9AD28514170009F9205 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9447B9AF2851424A009F9205 /* NotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHelper.swift; sourceTree = "<group>"; };
@@ -109,11 +132,18 @@
 		CE3C511D28579F6600A51227 /* LoginValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		CE3C511F28579F7200A51227 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		E96BDE5E2857B12500A304A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/JamesMusic.storyboard; sourceTree = "<group>"; };
+		E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sun Is Shining.mp3"; sourceTree = "<group>"; };
+		E9BBEF78285D16C6003259CA /* Sky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sky.mp3; sourceTree = "<group>"; };
+		E9BBEF7A285D1744003259CA /* Enchante.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Enchante.mp3; sourceTree = "<group>"; };
+		E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hawaii.mp3; sourceTree = "<group>"; };
 		E9EB81DD28539B9600BCBC40 /* Friday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friday.png; sourceTree = "<group>"; };
 		E9F6228228524256004FD5C6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9F622D228530FEF004FD5C6 /* Someday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Someday.mp3; sourceTree = "<group>"; };
 		E9F622D42853170B004FD5C6 /* Dark Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dark Ocean.png"; sourceTree = "<group>"; };
+		E9FE9938285AF244000FD882 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		E9FE993A285AF67C000FD882 /* DeezerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAPI.swift; sourceTree = "<group>"; };
+		E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigMusic.swift; sourceTree = "<group>"; };
 		F53FF350285EC3A700FDF4D9 /* recipe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = recipe.pdf; sourceTree = "<group>"; };
 		F53FF352285EC8F300FDF4D9 /* technical.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = technical.pdf; sourceTree = "<group>"; };
 		F53FF353285EC8F300FDF4D9 /* general.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = general.pdf; sourceTree = "<group>"; };
@@ -122,6 +152,10 @@
 		F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicalCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F570493A285793540062DCB7 /* Zahid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Zahid.storyboard; sourceTree = "<group>"; };
+		F570493C285795690062DCB7 /* hpbook2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook2.pdf; sourceTree = "<group>"; };
+		F570493D2857956A0062DCB7 /* hpbook3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook3.pdf; sourceTree = "<group>"; };
+		F570493E2857956B0062DCB7 /* hpbook1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hpbook1.pdf; sourceTree = "<group>"; };
+		F57049842858D6A70062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049862858DDA40062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049882858DDCB0062DCB7 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		F57049EB285A77B40062DCB7 /* FetchBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooks.swift; sourceTree = "<group>"; };
@@ -158,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9413CF932857E8D2007E7989 /* Search.storyboard */,
+				9423701B2858D733006BE3DF /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -167,10 +202,11 @@
 			children = (
 				942FE8FD28579D2200CEBEF2 /* Notes.storyboard */,
 				9447B9AD28514170009F9205 /* NotesViewController.swift */,
+				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
 				9447B9BD28514B35009F9205 /* AddNotesViewController.swift */,
 				9447B9BB28514A30009F9205 /* UpdateNotesViewController.swift */,
-				9447B9AF2851424A009F9205 /* NotesHelper.swift */,
 				9447B9B928514763009F9205 /* NotesTableViewCell.swift */,
+				94236736285C258A002BEEAE /* LoginAlerts.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -255,6 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				257D5CDB2857D90300505D25 /* Xavier.storyboard */,
+				258C46F4285F681800F9FE4A /* QuizCollectionViewCell.swift */,
+				252A1CE4285F592B007145A5 /* QuizViewController.swift */,
+				252A1CE2285F58F7007145A5 /* CurrentUser.swift */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
 				CE3C511F28579F7200A51227 /* SignupValidation.swift */,
 			);
@@ -265,9 +304,16 @@
 			isa = PBXGroup;
 			children = (
 				E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */,
+				E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */,
 				E9F622D228530FEF004FD5C6 /* Someday.mp3 */,
+				E9BBEF78285D16C6003259CA /* Sky.mp3 */,
+				E9BBEF7A285D1744003259CA /* Enchante.mp3 */,
+				E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */,
 				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
 				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
+				E9FE993A285AF67C000FD882 /* DeezerAPI.swift */,
+				E9FE9938285AF244000FD882 /* MusicPlayer.swift */,
+				E9FE993C285BB4B8000FD882 /* UIConfigMusic.swift */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -275,6 +321,7 @@
 		F570492F2857920D0062DCB7 /* ZahidBook */ = {
 			isa = PBXGroup;
 			children = (
+				25EF85CA2858006000FA5974 /* BooksViewController.swift */,
 				F53FF350285EC3A700FDF4D9 /* recipe.pdf */,
 				F53FF353285EC8F300FDF4D9 /* general.pdf */,
 				F53FF352285EC8F300FDF4D9 /* technical.pdf */,
@@ -282,12 +329,14 @@
 				F57049882858DDCB0062DCB7 /* BooksViewController.swift */,
 				F57049ED285B89C90062DCB7 /* BookModelStruct.swift */,
 				F570493A285793540062DCB7 /* Zahid.storyboard */,
+				F570493E2857956B0062DCB7 /* hpbook1.pdf */,
+				F570493C285795690062DCB7 /* hpbook2.pdf */,
+				F570493D2857956A0062DCB7 /* hpbook3.pdf */,
+				F57049842858D6A70062DCB7 /* BooksViewController.swift */,
 				F5704930285792600062DCB7 /* PdfScreenViewController.swift */,
-				F57049EF285BC2570062DCB7 /* WebUIKit.swift */,
 				F5704932285792680062DCB7 /* GeneralCollectionViewCell.swift */,
 				F57049342857926E0062DCB7 /* TechnicalCollectionViewCell.swift */,
 				F5704936285792740062DCB7 /* RecipesCollectionViewCell.swift */,
-				F57049EB285A77B40062DCB7 /* FetchBooks.swift */,
 			);
 			path = ZahidBook;
 			sourceTree = "<group>";
@@ -396,14 +445,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F570493F2857956B0062DCB7 /* hpbook2.pdf in Resources */,
+				F57049412857956B0062DCB7 /* hpbook1.pdf in Resources */,
+				E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */,
 				94984879284FE57C007211DC /* LaunchScreen.storyboard in Resources */,
 				F53FF351285EC3A700FDF4D9 /* recipe.pdf in Resources */,
 				F53FF355285EC8F300FDF4D9 /* general.pdf in Resources */,
 				F53FF354285EC8F300FDF4D9 /* technical.pdf in Resources */,
 				942FE8FE28579D2200CEBEF2 /* Notes.storyboard in Resources */,
 				9413CF942857E8D2007E7989 /* Search.storyboard in Resources */,
+				E9BBEF7B285D1744003259CA /* Enchante.mp3 in Resources */,
 				94984876284FE57C007211DC /* Assets.xcassets in Resources */,
 				257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */,
+				E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */,
+				E9BBEF7D285D17D7003259CA /* Hawaii.mp3 in Resources */,
 				E9EB81DE28539B9600BCBC40 /* Friday.png in Resources */,
 				E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */,
 				94984871284FE57A007211DC /* Main.storyboard in Resources */,
@@ -436,31 +491,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				9498486E284FE57A007211DC /* ViewController.swift in Sources */,
+				252A1CE5285F592B007145A5 /* QuizViewController.swift in Sources */,
 				CE2E554D285135AF00E237E8 /* SignupViewController.swift in Sources */,
 				9447B9B7285143D5009F9205 /* UsersNotes+CoreDataClass.swift in Sources */,
+				9423701C2858D733006BE3DF /* SearchViewController.swift in Sources */,
+				258C46F5285F681800F9FE4A /* QuizCollectionViewCell.swift in Sources */,
+				94236737285C258A002BEEAE /* LoginAlerts.swift in Sources */,
+				25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */,
+				F57049852858D6A80062DCB7 /* BooksViewController.swift in Sources */,
 				9498486A284FE57A007211DC /* AppDelegate.swift in Sources */,
 				9447B9B02851424A009F9205 /* NotesHelper.swift in Sources */,
 				9447B9BA28514763009F9205 /* NotesTableViewCell.swift in Sources */,
 				9447B9AE28514170009F9205 /* NotesViewController.swift in Sources */,
-				F57049872858DDA40062DCB7 /* BooksViewController.swift in Sources */,
-				F57049892858DDCB0062DCB7 /* BooksViewController.swift in Sources */,
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
+				E9FE993B285AF67C000FD882 /* DeezerAPI.swift in Sources */,
 				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
 				F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */,
-				F57049EE285B89C90062DCB7 /* BookModelStruct.swift in Sources */,
 				CE2E55512851438900E237E8 /* DBHelper.swift in Sources */,
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */,
+				252A1CE3285F58F7007145A5 /* CurrentUser.swift in Sources */,
+				E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */,
 				F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */,
 				9498486C284FE57A007211DC /* SceneDelegate.swift in Sources */,
 				E9F6228328524256004FD5C6 /* MusicViewController.swift in Sources */,
 				CE3C511B28579E7600A51227 /* DBHelperUser.swift in Sources */,
+				E9FE9939285AF244000FD882 /* MusicPlayer.swift in Sources */,
 				9447B9BC28514A30009F9205 /* UpdateNotesViewController.swift in Sources */,
 				CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */,
-				F57049EC285A77B40062DCB7 /* FetchBooks.swift in Sources */,
-				F57049F0285BC2580062DCB7 /* WebUIKit.swift in Sources */,
 				94984874284FE57A007211DC /* TakeItEasyApp.xcdatamodeld in Sources */,
 				CE2E554A2851359900E237E8 /* User+CoreDataClass.swift in Sources */,
 				F5704933285792680062DCB7 /* GeneralCollectionViewCell.swift in Sources */,
