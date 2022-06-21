@@ -13,9 +13,7 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var notesTable: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-        
-    @IBOutlet weak var navBar: UINavigationItem!
-    
+            
     static var tableObj :  UITableView!
     
     static var notes = [UsersNotes]()
@@ -37,10 +35,8 @@ class NotesViewController: UIViewController {
         NotesViewController.notes = NotesHelper.notes.getNotes()
         NotesViewController.tableObj = notesTable
         notesTable.reloadData()
-        CurrentUser.user.updateCurrentUserName()
-        navBar.title = CurrentUser.user.name
-
     }
+    
     @IBAction func signOut(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginNC")
