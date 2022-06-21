@@ -26,40 +26,40 @@ class LoginViewController: UIViewController {
          hideLabelErrormsg()
         viewDidLoad_PopulateCredentialInKeyChain()
         
-//        fetchBooks.getGeneral(completion: {
-//            result in
-//            switch result{
-//            case .failure(let error):
-//                print("Error Message",error)
-//            case .success(let res):
-//                print("genBooks loaded")
-//                }
-//          }
-//      )
-//        
-//        fetchBooks.getTechnical(completion: {
-//            result in
-//            switch result{
-//            case .failure(let error):
-//                print("Error Message",error)
-//            case .success(let res):
-//                print("techBooks loaded")
-//
-//                }
-//          }
-//      )
-//        
-//        fetchBooks.getRecipes(completion: {
-//            result in
-//            switch result{
-//            case .failure(let error):
-//                print("Error Message",error)
-//            case .success(let res):
-//                print("recBooks loaded")
-//
-//                }
-//          }
-//      )
+        fetchBooks.getGeneral(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("genBooks loaded")
+                }
+          }
+      )
+        
+        fetchBooks.getTechnical(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("techBooks loaded")
+
+                }
+          }
+      )
+        
+        fetchBooks.getRecipes(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("recBooks loaded")
+
+                }
+          }
+      )
         
     }
     
