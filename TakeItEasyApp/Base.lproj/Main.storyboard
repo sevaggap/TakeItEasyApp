@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,6 +17,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dd-3I-3nx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2073" y="750"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gxk-9d-oQU">
+            <objects>
+                <navigationController storyboardIdentifier="navBarLoggedIn" id="TnU-Ge-cmW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EEu-Eh-CEW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Ul-Lz-2Mx" kind="relationship" relationship="rootViewController" id="jGs-P8-nhJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQz-fF-Qhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1274" y="750"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iiF-7F-NAr">
@@ -41,16 +58,32 @@
             </objects>
             <point key="canvasLocation" x="-1864" y="750"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--User Name-->
         <scene sceneID="q3E-g4-iS0">
             <objects>
                 <tabBarController storyboardIdentifier="tabBar" id="4Ul-Lz-2Mx" customClass="TabBarController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="User Name" id="he1-QX-EIE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Sdr-WN-7IN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vWr-Bw-K5u">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Out">
+                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonSignOut:" destination="4Ul-Lz-2Mx" eventType="touchUpInside" id="7yl-hd-F7S"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MDC-ip-4DX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="navItemUsername" destination="he1-QX-EIE" id="FBw-fw-bPj"/>
                         <segue destination="6jk-sG-tVt" kind="relationship" relationship="viewControllers" id="Kqb-n5-zcv"/>
                         <segue destination="0O8-NW-WL6" kind="relationship" relationship="viewControllers" id="QxT-Pc-47b"/>
                         <segue destination="xUL-3k-IdW" kind="relationship" relationship="viewControllers" id="mH4-6Q-LeW"/>
@@ -60,7 +93,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn4-kf-ZfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1309" y="750"/>
+            <point key="canvasLocation" x="-478" y="750"/>
         </scene>
         <!--musicVC-->
         <scene sceneID="Wl9-ZA-krd">
@@ -70,7 +103,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlA-Ky-hzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="526"/>
+            <point key="canvasLocation" x="298" y="526"/>
         </scene>
         <!--booksVC-->
         <scene sceneID="drO-Vx-Jto">
@@ -80,7 +113,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIV-cn-Q58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="635"/>
+            <point key="canvasLocation" x="299" y="635"/>
         </scene>
         <!--quizVC-->
         <scene sceneID="SpT-iB-VDo">
@@ -90,7 +123,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5J-J3-Ybu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-525" y="749"/>
+            <point key="canvasLocation" x="307" y="749"/>
         </scene>
         <!--searchVC-->
         <scene sceneID="UuY-an-Fo2">
@@ -100,7 +133,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIo-AF-WYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554" y="852"/>
+            <point key="canvasLocation" x="277" y="852"/>
         </scene>
         <!--notesVC-->
         <scene sceneID="Yek-EZ-IGa">
@@ -110,7 +143,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDL-gm-dhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549" y="927"/>
+            <point key="canvasLocation" x="282" y="927"/>
         </scene>
     </scenes>
     <resources>
@@ -119,5 +152,8 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="note.text" catalog="system" width="128" height="106"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
