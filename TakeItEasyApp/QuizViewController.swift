@@ -104,29 +104,29 @@ extension QuizViewController {
         )
         QuizArrAll.append(
             Quiz.init(quizID: 2, quizDesc: "C Language", questions: [
-                Question.init(questionID: 1, questionDesc: "Swift is a type-safe language. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 2, questionDesc: "Tuple is a collection type in Swift. T/F?", answerOptions: [("True", false), ("False", true)]),
-                Question.init(questionID: 3, questionDesc: "Which of the following can be used to clear an array?", answerOptions: [(".removeAll()",true), (".clear()", false), (".cleanAll()", false)]),
-                Question.init(questionID: 4, questionDesc: "Structs are value type and classes are reference type. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 5, questionDesc: "Which of the following is NOT an access modifier in Swift?", answerOptions: [("Private", false),("Open", false),("File-private", false),("let", true)])
+                Question.init(questionID: 1, questionDesc: "C language is a cross-platform language. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 2, questionDesc: "How do you print information in the console?", answerOptions: [("print", false), ("printout", false), ("printf", true)]),
+                Question.init(questionID: 3, questionDesc: "How do you declare an integer variable?", answerOptions: [("int myVarName",false), ("int myVarName;", true), ("var int myVarName", false)]),
+                Question.init(questionID: 4, questionDesc: "C's features cleanly reflect the capabilities of the targeted CPUs. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 5, questionDesc: "Which of the following is NOT a type of loops in C?", answerOptions: [("for loop", false),("while loop", false),("do...while", false),("repeat", true)])
             ])
         )
         QuizArrAll.append(
             Quiz.init(quizID: 3, quizDesc: "JavaScript", questions: [
-                Question.init(questionID: 1, questionDesc: "Swift is a type-safe language. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 2, questionDesc: "Tuple is a collection type in Swift. T/F?", answerOptions: [("True", false), ("False", true)]),
-                Question.init(questionID: 3, questionDesc: "Which of the following can be used to clear an array?", answerOptions: [(".removeAll()",true), (".clear()", false), (".cleanAll()", false)]),
-                Question.init(questionID: 4, questionDesc: "Structs are value type and classes are reference type. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 5, questionDesc: "Which of the following is NOT an access modifier in Swift?", answerOptions: [("Private", false),("Open", false),("File-private", false),("let", true)])
+                Question.init(questionID: 1, questionDesc: "'.js' is an extension of JavaScript files. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 2, questionDesc: "JS can be used to program the behavior of webpages. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 3, questionDesc: "How do you print information in the console?", answerOptions: [("console.log()",true), ("document.write()", false), ("print()", false)]),
+                Question.init(questionID: 4, questionDesc: "You can add multi-line comments in JS with /*...*/. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 5, questionDesc: "Which of the following is NOT a conditional statement in JS?", answerOptions: [("if", false),("else", false),("switch", false),("do", true)])
             ])
         )
         QuizArrAll.append(
             Quiz.init(quizID: 4, quizDesc: "Python", questions: [
-                Question.init(questionID: 1, questionDesc: "Swift is a type-safe language. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 2, questionDesc: "Tuple is a collection type in Swift. T/F?", answerOptions: [("True", false), ("False", true)]),
-                Question.init(questionID: 3, questionDesc: "Which of the following can be used to clear an array?", answerOptions: [(".removeAll()",true), (".clear()", false), (".cleanAll()", false)]),
-                Question.init(questionID: 4, questionDesc: "Structs are value type and classes are reference type. T/F?", answerOptions: [("True", true), ("False", false)]),
-                Question.init(questionID: 5, questionDesc: "Which of the following is NOT an access modifier in Swift?", answerOptions: [("Private", false),("Open", false),("File-private", false),("let", true)])
+                Question.init(questionID: 1, questionDesc: "Python is an OOP language. T/F?", answerOptions: [("True", true), ("False", false)]),
+                Question.init(questionID: 2, questionDesc: "How do you print information in the console?", answerOptions: [("printout()", false), ("print()", true)]),
+                Question.init(questionID: 3, questionDesc: "How do you get the data type of a variable?", answerOptions: [("type(varName)",true), ("category(varName)", false), ("varName.type", false)]),
+                Question.init(questionID: 4, questionDesc: "There's no boolean datatype in Python. T/F?", answerOptions: [("True", false), ("False", true)]),
+                Question.init(questionID: 5, questionDesc: "You can convert types of a variable using casting in Python. T/F?", answerOptions: [("True", true), ("False", false)])
             ])
         )
         QuizArr = QuizArrAll
