@@ -11,7 +11,7 @@ import UIKit
 extension MusicViewController{
     func uiConfig(){
         
-       
+        modeChange()
         
         mainMusicImage.isUserInteractionEnabled = true
         forward.isUserInteractionEnabled = true
@@ -43,4 +43,32 @@ extension MusicViewController{
         circleImage3.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
         circleImage3.layer.shadowRadius = 2.0
     }
+    func modeChange()
+    {
+        if traitCollection.userInterfaceStyle == .dark
+        {
+    imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+
+    circleImg.tintColor = UIColor.systemIndigo
+    circleImage2.tintColor = UIColor.systemIndigo
+    circleImage3.tintColor = UIColor.systemIndigo
+    playPause.tintColor = UIColor.white
+    } else {
+    imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+    circleImg.tintColor = UIColor.white
+    circleImage2.tintColor = UIColor.white
+    circleImage3.tintColor = UIColor.white
+    playPause.tintColor = UIColor.systemIndigo
+    }
+        
+    }
 }
+
+
+
+
+
+
+
+
+
