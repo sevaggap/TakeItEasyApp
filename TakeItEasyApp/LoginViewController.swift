@@ -19,6 +19,49 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var switchState: UISwitch!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         hideLabelErrormsg()
+        viewDidLoad_PopulateCredentialInKeyChain()
+        
+        fetchBooks.getGeneral(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("genBooks loaded")
+                }
+          }
+      )
+        
+        fetchBooks.getTechnical(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("techBooks loaded")
+
+                }
+          }
+      )
+        
+        fetchBooks.getRecipes(completion: {
+            result in
+            switch result{
+            case .failure(let error):
+                print("Error Message",error)
+            case .success(let res):
+                print("recBooks loaded")
+
+                }
+          }
+      )
+        
+    }
+    
+    
    
     @IBAction func signIn(_ sender: Any) {
         
@@ -53,13 +96,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUp(_ sender: Any) {
         
-    }
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-         hideLabelErrormsg()
-        viewDidLoad_PopulateCredentialInKeyChain()
-        // Do any additional setup after loading the view.
     }
     
     func hideLabelErrormsg(){
