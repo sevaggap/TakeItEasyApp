@@ -158,17 +158,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
-    func viewDidLoad_TransparentNavBar() {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithTransparentBackground()
-            UINavigationBar.appearance().standardAppearance = appearance
-        }
-
-//    func viewDidLoad_PopulateCurrentUserName() {
-//            // TODO: - Uncomment the following two lines to populate user name in the nav bar
-//            CurrentUser.user.updateCurrentUserName()
-//            navItemUserName.title = CurrentUser.user.name
-//    }
+    
     
     
  
@@ -179,8 +169,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         searchBar.enablesReturnKeyAutomatically = true
         
       
-        viewDidLoad_TransparentNavBar()
-        //viewDidLoad_PopulateCurrentUserName()
+        
         uiConfig()
         
         

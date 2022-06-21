@@ -11,6 +11,8 @@ import UIKit
 extension MusicViewController{
     func uiConfig(){
         
+       
+        
         mainMusicImage.isUserInteractionEnabled = true
         forward.isUserInteractionEnabled = true
         backward.isUserInteractionEnabled = true
