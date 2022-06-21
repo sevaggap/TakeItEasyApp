@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController,WKUIDelegate, UINavigationBarDelegate, WKNavigationDelegate {
     
     @IBOutlet weak var navBar: UINavigationItem!
     
@@ -18,6 +18,9 @@ class SearchViewController: UIViewController {
         let webKitView = WKWebView()
         let url = URL(string: "https://www.google.com/")!
         webKitView.load(URLRequest(url: url))
+        webKitView.uiDelegate = self
+        webKitView.navigationDelegate = self
+        webKitView.allowsBackForwardNavigationGestures = true
         view = webKitView
         CurrentUser.user.updateCurrentUserName()
         navBar.title = CurrentUser.user.name
