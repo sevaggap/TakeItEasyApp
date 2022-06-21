@@ -38,6 +38,7 @@ class FetchBooks {
             do{
                 print("in books ", data)
                 result = try JSONDecoder().decode(BookModel.self, from: data)
+    
                 completion(.success(result!))
                // print("in result ", result)
             }

@@ -254,10 +254,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
               CV3.dataSource = self
               
               var fetchBooks = FetchBooks()
-//              var imgLinks = ImageLinks(smallThumbnail: "", thumbnail: "")
-//              var volInfo = VolumeInfo(title: "", description: "")
-//              var books = Books(id: "", selfLink: "")
-//              var bModel = BookModel(items: [books])
+
               
               fetchBooks.getGeneral(completion: {
                   result in
@@ -269,7 +266,9 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
                           if genBookLink == nil{
                               genBookLink = [item.volumeInfo.previewLink]
                           }else{
-                          genBookLink?.append(item.volumeInfo.previewLink)
+                              var link = item.volumeInfo.previewLink
+                              link = link.replacingOccurrences(of: "http", with: "https")
+                          genBookLink?.append(link)
                               
                           }
                       }
@@ -285,7 +284,9 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
                           if techBookLink == nil{
                               techBookLink = [item.volumeInfo.previewLink]
                           }else{
-                              techBookLink?.append(item.volumeInfo.previewLink)
+                              var link = item.volumeInfo.previewLink
+                              link = link.replacingOccurrences(of: "http", with: "https")
+                              techBookLink?.append(link)
                               
                           }
                       }
@@ -301,18 +302,16 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
                           if recBookLink == nil{
                               recBookLink = [item.volumeInfo.previewLink]
                           }else{
-                          recBookLink?.append(item.volumeInfo.previewLink)
+                              var link = item.volumeInfo.previewLink
+                              link = link.replacingOccurrences(of: "http", with: "https")
+                          recBookLink?.append(link)
                               
                           }
                       }
                 }
             })
               
-             // var timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateBooks), userInfo: nil, repeats: true)
-              
-//             let generalBooks = FetchBooks.fetchBooks.getGeneral()
-//             let technicalBooks = FetchBooks.fetchBooks.getTechnical()
-//             let recipesBooks = FetchBooks.fetchBooks.getRecipes()
+ 
     }
     
     @objc func updateBooks(){
@@ -333,13 +332,10 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
 //    func viewDidLoad_PopulateCurrentUserName() {
-//            // TODO: - Uncomment the following two lines to populate user name in the nav bar
 //            CurrentUser.user.updateCurrentUserName()
 //            navItemUserName.title = CurrentUser.user.name
-    
-    
-    
-}
+//
+//}
 
 //extension BooksViewController : UISearchBarDelegate{
 //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText : String){
@@ -361,3 +357,4 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
 
 
 
+}
