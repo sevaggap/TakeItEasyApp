@@ -466,11 +466,12 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var count = 0
         for item in musicList
         {
-            if item != "Deezer" && !item.contains(searchBar.text!)
+            if item != "Deezer" && !item.lowercased().contains(searchText.lowercased())
             {
                 musicList.remove(at: count)
             count -= 1

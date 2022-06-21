@@ -270,6 +270,7 @@ extension QuizViewController : UIPickerViewDataSource, UIPickerViewDelegate {
             labelCurrentQuestion.text = ""
             //TODO: - Enable FIRST-OPEN REMINDER MESSAGE
             //refresh
+            self.tabBarController?.tabBar.isHidden = false
             collectionViewQuiz.allowsSelection = true
             collectionViewQuiz.alpha = 1
             collectionViewQuiz.reloadData()

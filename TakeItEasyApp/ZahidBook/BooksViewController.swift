@@ -23,6 +23,7 @@ var searching = false
 
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate{
     
+    @IBOutlet weak var imageViewBackground: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var CV1: UICollectionView!
@@ -59,8 +60,8 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         
             searching = true
             CV1.reloadData()
-            CV2.reloadData()
-            CV3.reloadData()
+//            CV2.reloadData()
+//            CV3.reloadData()
         }
     }
     
@@ -376,8 +377,24 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
             }
     }
 }
-            
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            self.imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            self.imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
           override func viewDidLoad() {
               super.viewDidLoad()
               
