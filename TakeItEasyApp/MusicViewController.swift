@@ -125,7 +125,10 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
  
-   
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        player?.pause()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

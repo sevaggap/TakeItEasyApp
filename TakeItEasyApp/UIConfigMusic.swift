@@ -26,7 +26,7 @@ extension MusicViewController{
         mainMusicLabel.text! = "Deezer"
         
         playPause.image = UIImage(systemName: "pause.fill")
-        playPause.tintColor = UIColor.systemIndigo
+    
         
         circleImg.layer.shadowColor = custColor
         circleImg.layer.shadowOpacity = 1.0
