@@ -13,8 +13,8 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var notesTable: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-        
-    @IBOutlet weak var navBar: UINavigationItem!
+            
+    @IBOutlet weak var imageViewBackground: UIImageView!
     
     static var tableObj :  UITableView!
     
@@ -37,10 +37,20 @@ class NotesViewController: UIViewController {
         NotesViewController.notes = NotesHelper.notes.getNotes()
         NotesViewController.tableObj = notesTable
         notesTable.reloadData()
-        CurrentUser.user.updateCurrentUserName()
-        navBar.title = CurrentUser.user.name
-
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        
+
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
+    
     @IBAction func signOut(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginNC")

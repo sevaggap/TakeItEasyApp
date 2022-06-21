@@ -7,10 +7,10 @@
 
 import UIKit
 
-// TODO: -KEYCHAIN
 
 class QuizViewController: UIViewController {
 
+    @IBOutlet weak var imageViewBackground: UIImageView!
     @IBOutlet weak var labelSelectionReminder: UILabel!
     var isFiltered = false
     @IBOutlet weak var buttonFilter: UIButton!
@@ -59,6 +59,17 @@ class QuizViewController: UIViewController {
         viewDidLoad_GetCurrentUserInfo()
         viewDidLoad_PrepareQuizData()
         viewDidLoad_PrepareDatabaseAndTables()
+    }
+
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
     }
 }
 

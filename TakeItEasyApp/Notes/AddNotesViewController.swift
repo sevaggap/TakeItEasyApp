@@ -13,7 +13,7 @@ class AddNotesViewController: UIViewController {
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
     @IBOutlet weak var textToSpeechLabel: UILabel!
-    
+    @IBOutlet weak var imageViewBackground: UIImageView!
     let audioEngine = AVAudioEngine()
     let speechRecognizer = SFSpeechRecognizer()
     let bufferRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
@@ -24,6 +24,25 @@ class AddNotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textToSpeechLabel.text = ""
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
     }
     
     @IBAction func saveNotePressed(_ sender: Any) {

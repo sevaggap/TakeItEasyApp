@@ -46,6 +46,7 @@
 		CE3C512028579F7200A51227 /* SignupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C511F28579F7200A51227 /* SignupValidation.swift */; };
 		E91326C52860C905003DDABE /* Away.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E91326C42860C905003DDABE /* Away.mp3 */; };
 		E91326C72860C955003DDABE /* Drive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E91326C62860C955003DDABE /* Drive.mp3 */; };
+		E91326CB286164A8003DDABE /* SearchMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91326CA286164A8003DDABE /* SearchMusic.swift */; };
 		E96BDE5F2857B12500A304A8 /* JamesMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96BDE5D2857B12500A304A8 /* JamesMusic.storyboard */; };
 		E9BBEF77285D1674003259CA /* Sun Is Shining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */; };
 		E9BBEF79285D16C6003259CA /* Sky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9BBEF78285D16C6003259CA /* Sky.mp3 */; };
@@ -134,6 +135,7 @@
 		CE3C511F28579F7200A51227 /* SignupValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidation.swift; sourceTree = "<group>"; };
 		E91326C42860C905003DDABE /* Away.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Away.mp3; sourceTree = "<group>"; };
 		E91326C62860C955003DDABE /* Drive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drive.mp3; sourceTree = "<group>"; };
+		E91326CA286164A8003DDABE /* SearchMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusic.swift; sourceTree = "<group>"; };
 		E96BDE5E2857B12500A304A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/JamesMusic.storyboard; sourceTree = "<group>"; };
 		E9BBEF76285D1674003259CA /* Sun Is Shining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sun Is Shining.mp3"; sourceTree = "<group>"; };
 		E9BBEF78285D16C6003259CA /* Sky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sky.mp3; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				E9BBEF78285D16C6003259CA /* Sky.mp3 */,
 				E9BBEF7A285D1744003259CA /* Enchante.mp3 */,
 				E9BBEF7C285D17D7003259CA /* Hawaii.mp3 */,
+				E91326CA286164A8003DDABE /* SearchMusic.swift */,
 				E9F6228228524256004FD5C6 /* MusicViewController.swift */,
 				E9F62286285242B5004FD5C6 /* MusicCollectionViewCell.swift */,
 				E9FE993A285AF67C000FD882 /* DeezerAPI.swift */,
@@ -519,6 +522,7 @@
 				CE2E554F285135CD00E237E8 /* LoginViewController.swift in Sources */,
 				E9F62287285242B5004FD5C6 /* MusicCollectionViewCell.swift in Sources */,
 				F5704931285792600062DCB7 /* PdfScreenViewController.swift in Sources */,
+				E91326CB286164A8003DDABE /* SearchMusic.swift in Sources */,
 				252A1CE3285F58F7007145A5 /* CurrentUser.swift in Sources */,
 				E9FE993D285BB4B8000FD882 /* UIConfigMusic.swift in Sources */,
 				F5704937285792740062DCB7 /* RecipesCollectionViewCell.swift in Sources */,
