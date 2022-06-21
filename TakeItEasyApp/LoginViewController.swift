@@ -19,49 +19,68 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var switchState: UISwitch!
     
+    @IBOutlet weak var imageViewBackground: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          hideLabelErrormsg()
         viewDidLoad_PopulateCredentialInKeyChain()
         
-        fetchBooks.getGeneral(completion: {
-            result in
-            switch result{
-            case .failure(let error):
-                print("Error Message",error)
-            case .success(let res):
-                print("genBooks loaded")
-                }
-          }
-      )
-        
-        fetchBooks.getTechnical(completion: {
-            result in
-            switch result{
-            case .failure(let error):
-                print("Error Message",error)
-            case .success(let res):
-                print("techBooks loaded")
-
-                }
-          }
-      )
-        
-        fetchBooks.getRecipes(completion: {
-            result in
-            switch result{
-            case .failure(let error):
-                print("Error Message",error)
-            case .success(let res):
-                print("recBooks loaded")
-
-                }
-          }
-      )
+//        fetchBooks.getGeneral(completion: {
+//            result in
+//            switch result{
+//            case .failure(let error):
+//                print("Error Message",error)
+//            case .success(let res):
+//                print("genBooks loaded")
+//                }
+//          }
+//      )
+//        
+//        fetchBooks.getTechnical(completion: {
+//            result in
+//            switch result{
+//            case .failure(let error):
+//                print("Error Message",error)
+//            case .success(let res):
+//                print("techBooks loaded")
+//
+//                }
+//          }
+//      )
+//        
+//        fetchBooks.getRecipes(completion: {
+//            result in
+//            switch result{
+//            case .failure(let error):
+//                print("Error Message",error)
+//            case .success(let res):
+//                print("recBooks loaded")
+//
+//                }
+//          }
+//      )
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
    
     @IBAction func signIn(_ sender: Any) {
         
