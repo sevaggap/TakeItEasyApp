@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -38,7 +39,7 @@
                                         <rect key="frame" x="28" y="154" width="318" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                        <color key="textColor" red="0.51802598099999997" green="0.28338173049999998" blue="0.98435980079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" name="TakeItEasy-ColorSet"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3LK-dN-akP" userLabel="UIViewQuizPicker">
@@ -214,6 +215,7 @@
                         <outlet property="collectionViewQuiz" destination="h0U-KX-kMS" id="uty-bV-0dp"/>
                         <outlet property="containerViewQuizPicker" destination="3LK-dN-akP" id="gEe-gS-qDV"/>
                         <outlet property="containerViewResults" destination="feE-nh-T6G" id="p1o-f5-Qwt"/>
+                        <outlet property="imageViewBackground" destination="HMs-jl-rz5" id="7O1-bL-fCI"/>
                         <outlet property="imageViewDownloadBg" destination="HlJ-2o-NLX" id="fMv-CT-dx8"/>
                         <outlet property="labelCompletedAt" destination="Iw9-tM-gAN" id="hf6-Pj-miv"/>
                         <outlet property="labelCurrentQuestion" destination="G1e-Ff-ZMi" id="g01-Ao-zaD"/>
@@ -236,6 +238,9 @@
         <image name="checklist" catalog="system" width="128" height="105"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="TakeItEasy-ColorSet">
+            <color red="0.30588235294117649" green="0.29803921568627451" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
