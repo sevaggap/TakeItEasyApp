@@ -7,18 +7,10 @@
 
 import UIKit
 
-// TODO: -KEYCHAIN
 
 class QuizViewController: UIViewController {
-    func buttonSignOut_didTouchUpInside() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginScreen = storyboard.instantiateViewController(withIdentifier: "loginNC")
-        loginScreen.modalPresentationStyle = .fullScreen
-        self.present(loginScreen, animated: true, completion: nil)
-    }
-    @IBAction func buttonSignOut_didTouchUpInside(_ sender: Any) {
-        buttonSignOut_didTouchUpInside()
-    }
+
+    @IBOutlet weak var imageViewBackground: UIImageView!
     @IBOutlet weak var labelSelectionReminder: UILabel!
     var isFiltered = false
     @IBOutlet weak var buttonFilter: UIButton!
@@ -42,7 +34,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var collectionViewQuiz: UICollectionView!
     @IBOutlet weak var containerViewQuizPicker: UIView!
     @IBOutlet weak var containerViewResults: UIView!
-    @IBOutlet weak var navigationItem_Username: UINavigationItem!
+    
     
     /// Arr to store all quiz objects
     var QuizArrAll = [Quiz]()
@@ -68,6 +60,17 @@ class QuizViewController: UIViewController {
         viewDidLoad_PrepareQuizData()
         viewDidLoad_PrepareDatabaseAndTables()
     }
+
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
 }
 
 // MARK: PART 1. viewDidLoad functions
@@ -84,7 +87,7 @@ extension QuizViewController {
     func viewDidLoad_GetCurrentUserInfo() {
         CurrentUser.user.updateCurrentUserName()
         print("Current user: \(CurrentUser.user.name!)")
-        navigationItem_Username.title = CurrentUser.user.name!
+        //navigationItem_Username.title = CurrentUser.user.name!
         let userDefaults = UserDefaults.standard
         currentUserEmail = userDefaults.string(forKey: "lastUser")!
     }
@@ -193,6 +196,7 @@ extension QuizViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             let alertBeforeQuiz = UIAlertController(title: "Reminder", message: "You’re about to start quiz: \(QuizArr[indexPath.row].quizDesc). During the quiz you won’t be able to switch between tabs. Please select Continue or Cancel.", preferredStyle: .alert)
             let alertActionContinue = UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                self.labelSelectionReminder.alpha = 0
                 self.currentQuizID = quizIDOfCell
                 self.currentQuestionID = 1
                 self.hideResult()
