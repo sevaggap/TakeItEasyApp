@@ -99,13 +99,6 @@ class LoginViewController: UIViewController {
     @IBAction func signUp(_ sender: Any) {
         
     }
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-         hideLabelErrormsg()
-         viewDidLoad_PopulateCredentialInKeyChain()
-        // Do any additional setup after loading the view.
-    }
     
     func hideLabelErrormsg(){
         errormsgLabel.text = ""
