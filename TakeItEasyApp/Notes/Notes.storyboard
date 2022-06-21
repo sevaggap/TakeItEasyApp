@@ -13,7 +13,7 @@
         <!--Username-->
         <scene sceneID="pX3-xm-231">
             <objects>
-                <viewController id="p71-qU-rYH" customClass="NotesViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notesVC" id="p71-qU-rYH" customClass="NotesViewController" customModule="TakeItEasyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="paU-J3-gf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="0cu-uv-QJU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="aXb-AF-FA9"/>
                     <navigationItem key="navigationItem" title="Username" id="jck-oE-4gL">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="0h9-Pd-bNR">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yxc-cQ-vgw">
@@ -252,26 +253,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gG3-kl-wBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6078.2608695652179" y="81.696428571428569"/>
-        </scene>
-        <!--Notes-->
-        <scene sceneID="kRZ-o6-aLw">
-            <objects>
-                <navigationController storyboardIdentifier="notesVC" automaticallyAdjustsScrollViewInsets="NO" id="T9S-6R-uQD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="h1K-3F-IFE"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J9f-EH-4Jv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="p71-qU-rYH" kind="relationship" relationship="rootViewController" id="a1m-hJ-Kgx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uEY-vb-Cx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4667" y="82"/>
         </scene>
     </scenes>
     <resources>
