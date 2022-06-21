@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FetchBooks {
+class FetchBooks : BooksViewController {
     
     static var fetchBooks = FetchBooks()
     
@@ -40,7 +40,7 @@ class FetchBooks {
                 result = try JSONDecoder().decode(BookModel.self, from: data)
     
                 completion(.success(result!))
-               // print("in result ", result)
+                genBooks = result!
             }
             catch let err{
                 //print(err)
@@ -72,6 +72,8 @@ class FetchBooks {
                 print("in books ", data)
                 result = try JSONDecoder().decode(BookModel.self, from: data)
                 completion(.success(result!))
+                techBooks = result!
+
                // print("in result ", result)
             }
             catch let err{
@@ -104,6 +106,7 @@ class FetchBooks {
                 print("in books ", data)
                 result = try JSONDecoder().decode(BookModel.self, from: data)
                 completion(.success(result!))
+                recpBooks = result!
                // print("in result ", result)
             }
             catch let err{

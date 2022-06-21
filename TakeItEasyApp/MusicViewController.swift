@@ -10,6 +10,7 @@ import AVFoundation
 
 
 class MusicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+    @IBOutlet weak var imageViewBackground: UIImageView!
     
     var globalIndexPath : IndexPath?
     @IBOutlet weak var musicCV: UICollectionView!
@@ -33,6 +34,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var forward: UIImageView!
     @IBOutlet weak var backward: UIImageView!
     
+    var stopAnimate : Bool = false
     var songChange : Bool = false
     var songNum : Int = 0
     var count : Int = 0
@@ -40,6 +42,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     var playBool = true
     var uCell : MusicCollectionViewCell?
     var musicList = ["Deezer", "Sky", "Hawaii", "Enchante", "Drive"]
+    var musicListOriginal = ["Deezer", "Sky", "Hawaii", "Enchante", "Drive"]
     var Audio : AVAudioPlayer?
     var timer : Timer?
     var mModel : MusicModel?
@@ -48,47 +51,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     var mUrl = URL(string: "https://api.deezer.com/track/1522223672")!
     var searchPlay : Bool = false
   
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("helo")
-    }
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("hello")
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-         
-        print("hi")
-       if(tileSelected == 0)
-        {
-           
-           var str = searchBar.text!
-           var strrep = str.replacingOccurrences(of: " ", with: "_")
-           var newstr = "https://api.deezer.com/search?q=" + strrep
-           var searchUrl = URL(string: newstr)
-           print(searchUrl)
-           getDataSearch(url: searchUrl!, completion: { result in
-            switch result{
-            case .failure(let error):
-                print("sw", error)
-            case .success(let res):
-                self.mModel = res.data.first
-                print()
-                self.sURL = URL(string: self.mModel!.preview)
-                self.songChange = true
-
-                self.setMusicAV(musicUrl: self.sURL!)
-                //for item in res.album
-
-                self.getMusicImage(urlstring: (self.mModel?.album.cover_medium)!)
-                self.player?.pause()
-                self.player?.play()
-                self.searchPlay = true
-            }
-            })
-       }
-        
-        
-    }
+   
     
     func shuffle()
     {
@@ -158,17 +121,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
-    func viewDidLoad_TransparentNavBar() {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithTransparentBackground()
-            UINavigationBar.appearance().standardAppearance = appearance
-        }
-
-//    func viewDidLoad_PopulateCurrentUserName() {
-//            // TODO: - Uncomment the following two lines to populate user name in the nav bar
-//            CurrentUser.user.updateCurrentUserName()
-//            navItemUserName.title = CurrentUser.user.name
-//    }
+    
     
     
  
@@ -179,8 +132,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         searchBar.enablesReturnKeyAutomatically = true
         
       
-        viewDidLoad_TransparentNavBar()
-        //viewDidLoad_PopulateCurrentUserName()
+        
         uiConfig()
         
         
@@ -206,7 +158,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         playBool = true
         playback()
         
-        var timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
+        var timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkUpdates), userInfo: nil, repeats: true)
         
         //let sUrl = URL(string: musicData!.preview)
        
@@ -235,14 +187,21 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.musicImage.contentMode = .scaleAspectFill
         cell.animationDelay = Double(indexPath.row)
         cell.musicLabel.text! = musicList[indexPath.row]
+        if (stopAnimate == false)
+        {
         cell.animateCell()
+        }
+        
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
        
         var cell2 = collectionView.cellForItem(at: indexPath) as! MusicCollectionViewCell
+        
         cell2.animationDelay = 0.5
         cell2.animateCell()
+        
 //        cell2.dest_y = mainMusicImage.center.y
 //        cell2.dest_x = mainMusicImage.center.x
 //        animateCellImg(cell_x: cell2.center.x, cell_y: collectionView.center.y, musLbl: cell2.musicLabel.text!)
@@ -296,6 +255,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
 //            }, completion: nil)
 //
 //        })
+        
         cell.animationDelay = 1.0
         cell.animateCell()
         
@@ -354,7 +314,7 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func playback(){
-        playPause.tintColor = UIColor.systemIndigo
+       
         if (playBool == true)
         {
            playPause.image = UIImage(systemName: "play.fill")
@@ -368,9 +328,14 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
             player?.play()
             
         }
-        playPause.tintColor = UIColor.systemIndigo
-        
+                
     }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            super.traitCollectionDidChange(previousTraitCollection)
+           modeChange()
+        
+        
+        }
     
     func mainAnimated(img : UIImageView)
     {
@@ -498,16 +463,71 @@ class MusicViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        var count = 0
+        for item in musicList
+        {
+            if item != "Deezer" && !item.contains(searchBar.text!)
+            {
+                musicList.remove(at: count)
+            count -= 1
+            }
+            count += 1
+        }
+        stopAnimate = true
+        if searchBar.text == ""
+        {
+            musicList = musicListOriginal
+            stopAnimate = false
+        }
+        
+        
+        
+        musicCV.reloadData()
+       
+        
     }
-    */
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        musicList = musicListOriginal
+        stopAnimate = true
+        musicCV.reloadData()
+        stopAnimate = false
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+         
+        print("hi")
+       if(tileSelected == 0)
+        {
+           
+           var str = searchBar.text!
+           var strrep = str.replacingOccurrences(of: " ", with: "_")
+           var newstr = "https://api.deezer.com/search?q=" + strrep
+           var searchUrl = URL(string: newstr)
+           print(searchUrl)
+           getDataSearch(url: searchUrl!, completion: { result in
+            switch result{
+            case .failure(let error):
+                print("sw", error)
+            case .success(let res):
+                self.mModel = res.data.first
+                print()
+                self.sURL = URL(string: self.mModel!.preview)
+                self.songChange = true
 
+                self.setMusicAV(musicUrl: self.sURL!)
+                //for item in res.album
+
+                self.getMusicImage(urlstring: (self.mModel?.album.cover_medium)!)
+                self.player?.pause()
+                self.player?.play()
+                self.searchPlay = true
+            }
+            })
+       }
+        
+        
+    }
     
 }

@@ -20,10 +20,10 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var re_enterPassword: UITextField!
     
     @IBOutlet weak var userMobile: UITextField!
-    
-    @IBOutlet weak var enteredOTP: UITextField!
-    
+        
     @IBOutlet weak var labelErrormsg: UILabel!
+    
+    @IBOutlet weak var imageViewBackground: UIImageView!
     
     var OTP : Int?
     
@@ -32,6 +32,25 @@ class SignupViewController: UIViewController {
         hideLabelErrormsg()
         UNUserNotificationCenter.current().delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
     }
     
     @IBAction func getOTP(_ sender: Any) {

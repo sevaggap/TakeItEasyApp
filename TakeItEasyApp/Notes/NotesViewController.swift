@@ -14,6 +14,8 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
             
+    @IBOutlet weak var imageViewBackground: UIImageView!
+    
     static var tableObj :  UITableView!
     
     static var notes = [UsersNotes]()
@@ -35,6 +37,18 @@ class NotesViewController: UIViewController {
         NotesViewController.notes = NotesHelper.notes.getNotes()
         NotesViewController.tableObj = notesTable
         notesTable.reloadData()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.userInterfaceStyle == .dark
+                {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground-Dark")
+        
+
+        } else {
+            imageViewBackground.image = UIImage(named: "TakeItEasyBackground")
+        }
     }
     
     @IBAction func signOut(_ sender: Any) {
