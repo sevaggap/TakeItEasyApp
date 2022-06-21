@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		252A1CE3285F58F7007145A5 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A1CE2285F58F7007145A5 /* CurrentUser.swift */; };
 		252A1CE5285F592B007145A5 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A1CE4285F592B007145A5 /* QuizViewController.swift */; };
+		252E015D28612312004D8CA0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E015C28612312004D8CA0 /* TabBarController.swift */; };
 		257D5CDD2857D90300505D25 /* Xavier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257D5CDB2857D90300505D25 /* Xavier.storyboard */; };
 		258C46F5285F681800F9FE4A /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258C46F4285F681800F9FE4A /* QuizCollectionViewCell.swift */; };
+		25BBD3DB2860D6BC009996BF /* RememberMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBD3DA2860D6BC009996BF /* RememberMe.swift */; };
 		25EF85CB2858006000FA5974 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EF85CA2858006000FA5974 /* BooksViewController.swift */; };
 		9413CF942857E8D2007E7989 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9413CF932857E8D2007E7989 /* Search.storyboard */; };
 		94236737285C258A002BEEAE /* LoginAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94236736285C258A002BEEAE /* LoginAlerts.swift */; };
@@ -91,8 +93,10 @@
 /* Begin PBXFileReference section */
 		252A1CE2285F58F7007145A5 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		252A1CE4285F592B007145A5 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		252E015C28612312004D8CA0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		257D5CDC2857D90300505D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Xavier.storyboard; sourceTree = "<group>"; };
 		258C46F4285F681800F9FE4A /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
+		25BBD3DA2860D6BC009996BF /* RememberMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMe.swift; sourceTree = "<group>"; };
 		25EF85CA2858006000FA5974 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9413CF932857E8D2007E7989 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		94236736285C258A002BEEAE /* LoginAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlerts.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 				252A1CE2285F58F7007145A5 /* CurrentUser.swift */,
 				CE3C511D28579F6600A51227 /* LoginValidation.swift */,
 				CE3C511F28579F7200A51227 /* SignupValidation.swift */,
+				252E015C28612312004D8CA0 /* TabBarController.swift */,
+				25BBD3DA2860D6BC009996BF /* RememberMe.swift */,
 			);
 			name = Xavier;
 			sourceTree = "<group>";
@@ -504,6 +510,8 @@
 				9447B9B8285143D5009F9205 /* UsersNotes+CoreDataProperties.swift in Sources */,
 				E9FE993B285AF67C000FD882 /* DeezerAPI.swift in Sources */,
 				9447B9BE28514B35009F9205 /* AddNotesViewController.swift in Sources */,
+				25BBD3DB2860D6BC009996BF /* RememberMe.swift in Sources */,
+				252E015D28612312004D8CA0 /* TabBarController.swift in Sources */,
 				CE2E554B2851359900E237E8 /* User+CoreDataProperties.swift in Sources */,
 				F56BBC122860C6C800BB9A0C /* BookModelStruct.swift in Sources */,
 				F57049352857926E0062DCB7 /* TechnicalCollectionViewCell.swift in Sources */,
